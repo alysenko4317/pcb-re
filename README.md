@@ -26,6 +26,7 @@ The repository currently contains schematics for the following devices:
 - **Penxess-6 Mini-UPS (12.6V)**  
 - **Powerware Prestige 1000 UPS**  
 - **XO PSA-700 Power Station (inverter)**
+- **Millenium HOHC-2500 (Simistor Voltage Regulator)** 
 
 ## Contribution and Disclaimer
 
