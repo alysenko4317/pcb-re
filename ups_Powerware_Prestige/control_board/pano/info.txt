@@ -1,0 +1,5 @@
+panorama_back.jpg and panorama_face.jpg were generated in Photoshop using the Automerge feature. While they look visually impressive, they are unsuitable as Print Layout templates because the layers cannot be aligned properly over the entire board.
+
+To overcome this, I manually created two panoramas—IMG_B_P.jpg and IMG_B_C.jpg—by stitching photographs together. Although these manually composed images are not as smooth due to slight perspective distortions, they serve effectively as templates because the layer transitions across the board align correctly.
+
+Additionally, IMG_P_C-HL.jpg includes locally highlighted areas for enhanced detail.
