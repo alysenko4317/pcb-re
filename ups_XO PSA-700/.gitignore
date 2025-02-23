@@ -1,2 +1,7 @@
 datasheets
 micro/png
+micro/*.docx
+pcb/orig
+pcb/old
+pcb/*.bak
+Backup*.spl8
