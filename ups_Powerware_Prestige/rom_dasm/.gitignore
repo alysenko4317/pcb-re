@@ -1,0 +1,4 @@
+*.rep/user/
+*.rep/projectState
+*.lock
+*.log
