@@ -78,10 +78,10 @@ Artifacts:
 - High-quality panoramas of the control board (both sides):  
 
   **Component side (face):**  
-  [<img src="./control_board/pano/panorama_face.jpg" alt="Control board – component side" width="350">](./control_board/pano/panorama_face.jpg)
+  [<img src="./control_board/pano/panorama_face.jpg" alt="Control board – component side" width="950">](./control_board/pano/panorama_face.jpg)
 
   **Solder side (back):**  
-  [<img src="./control_board/pano/panorama_back.jpg" alt="Control board – solder side" width="350">](./control_board/pano/panorama_back.jpg)
+  [<img src="./control_board/pano/panorama_back.jpg" alt="Control board – solder side" width="950">](./control_board/pano/panorama_back.jpg)
 
   These panoramas are intended for **component identification** (all SMD markings are readable)
   and for cross-checking the Sprint-Layout project.
