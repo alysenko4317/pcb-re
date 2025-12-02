@@ -1,6 +1,5 @@
 control_board/orig
 control_board/pano/png
-power_board/orig
-power_board/*.bak
 control_board/*.bak
+power_board/pcb/*.bak
 power_board/Backup*.spl8
