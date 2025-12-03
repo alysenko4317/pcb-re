@@ -1,0 +1,71 @@
+#include "stm32f0xx.h"
+
+void ComputeBusFrequencies(uint32_t *freq_table)
+{
+    uint32_t sysclk_hz = 0;
+    uint32_t hclk_hz = 0;
+    uint32_t pclk1_hz = 0;
+    uint32_t pll_mul;
+    uint32_t prediv;
+    uint32_t pll_input;
+
+    // Determine SYSCLK source
+    uint32_t sws = (RCC->CFGR >> 2) & 0x3U;
+
+    switch (sws)
+    {
+        case 0x0: // HSI used as system clock
+            sysclk_hz = 8000000U;
+            break;
+        case 0x1: // HSE used as system clock
+            sysclk_hz = 8000000U; // assuming 8MHz HSE for example
+            break;
+        case 0x2: // PLL used as system clock
+        {
+            // Determine PLL source and multiplier
+            if ((RCC->CFGR & RCC_CFGR_PLLSRC) == 0)
+            {
+                pll_input = 8000000U; // HSI / 2
+            }
+            else
+            {
+                // PLL source = HSE / PREDIV
+                prediv = ((RCC->CFGR2 & RCC_CFGR2_PREDIV) + 1U);
+                pll_input = 8000000U / prediv;
+            }
+
+            pll_mul = (((RCC->CFGR & RCC_CFGR_PLLMUL) >> 18U) + 2U);
+            sysclk_hz = pll_input * pll_mul;
+            break;
+        }
+        case 0x3: // Reserved
+        default:
+            sysclk_hz = 8000000U;
+            break;
+    }
+
+    // Compute HCLK (AHB prescaler)
+    uint32_t hpre = (RCC->CFGR & RCC_CFGR_HPRE) >> 4U;
+    static const uint8_t AHBPrescTable[16] = {0,0,0,0,0,0,0,0,1,2,3,4,6,7,8,9};
+    hclk_hz = sysclk_hz >> AHBPrescTable[hpre];
+
+    // Compute PCLK1 (APB1 prescaler)
+    uint32_t ppre = (RCC->CFGR & RCC_CFGR_PPRE) >> 8U;
+    static const uint8_t APBPrescTable[8] = {0,0,0,0,1,2,3,4};
+    pclk1_hz = hclk_hz >> APBPrescTable[ppre];
+
+    // Fill freq_table
+    freq_table[0] = sysclk_hz;  // SYSCLK
+    freq_table[1] = hclk_hz;    // HCLK
+    freq_table[2] = pclk1_hz;   // PCLK1
+
+    // Optionally compute more — for MCO, USART, etc.
+    // For simplicity, we can fill dummy values for now:
+    freq_table[3] = pclk1_hz;  // APB2 = APB1 on STM32F0
+    freq_table[4] = 0;         // MCO not used
+    freq_table[5] = sysclk_hz; // USART — usually driven by SYSCLK
+    freq_table[6] = sysclk_hz; // for completeness
+    freq_table[7] = sysclk_hz; // for completeness
+    freq_table[8] = sysclk_hz; // for completeness
+    freq_table[9] = sysclk_hz; // for completeness
+}

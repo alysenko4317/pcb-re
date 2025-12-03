@@ -59,6 +59,10 @@ Each larger project has its own README with photos, schematic/layout notes, ROM 
   Reverse engineering of the **Bluetti T200 AC charger** (for EB3A / EB55 / EB70 and similar):  
   APFC (boost PFC) schematic in sPlan, based on the controller’s reference design with OEM tweaks, plus external device photos.
   
+- [`bluetti_EB3A/README.md`](./bluetti_EB3A/README.md)  
+  **Firmware reverse engineering** of the **Bluetti EB3A** portable power station (110 V model):  
+  original inverter & panel firmware dumps, Ghidra analysis project, and an early C “re-created firmware” skeleton.
+  
 As new devices are added or existing projects become more complete, their per-device READMEs will be updated with:
 
 - current status of the reverse-engineered schematics and PCB tracing,

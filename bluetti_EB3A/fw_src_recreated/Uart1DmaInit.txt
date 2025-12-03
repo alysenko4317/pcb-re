@@ -1,0 +1,95 @@
+// Example buffer definitions
+#define UART1_TX_BUFFER_SIZE  16
+#define UART1_RX_BUFFER_SIZE  512
+
+uint8_t uart1_tx_buffer[UART1_TX_BUFFER_SIZE];
+uint8_t uart1_rx_buffer[UART1_RX_BUFFER_SIZE];
+
+// Example function to initialize UART1 + DMA
+void InitUart1AndDma(void)
+{
+    // === GPIO configuration for USART1 TX (PB6) ===
+    GPIO_Config gpio_tx = {
+        .PinMask = (1 << 6),            // PB6
+        .Mode = GPIO_MODE_AF,
+        .Pull = GPIO_NOPULL,
+        .AlternateFunction = 1,         // AF1 = USART1_TX on PB6
+        .Speed = GPIO_SPEED_DEFAULT
+    };
+
+    GPIO_Configure(GPIOB, &gpio_tx);
+    GPIO_SetAF(GPIOB, 6, 1);
+
+    // === GPIO configuration for USART1 RX (PB7) ===
+    GPIO_Config gpio_rx = {
+        .PinMask = (1 << 7),            // PB7
+        .Mode = GPIO_MODE_AF,
+        .Pull = GPIO_NOPULL,
+        .AlternateFunction = 1,         // AF1 = USART1_RX on PB7
+        .Speed = GPIO_SPEED_DEFAULT
+    };
+
+    GPIO_Configure(GPIOB, &gpio_rx);
+    GPIO_SetAF(GPIOB, 7, 1);
+
+    // === USART1 basic initialization ===
+    USART_Disable(USART1);
+
+    USART_Config usart_cfg = {
+        .BaudrateReg = CalculateBRR(115200),  // Example function to calculate BRR
+        .WordLength = USART_WORDLENGTH_8B,
+        .StopBits = USART_STOPBITS_1,
+        .Parity = USART_PARITY_NONE,
+        .HwFlowCtl = USART_HWCONTROL_NONE,
+        .Mode = USART_MODE_TX_RX
+    };
+
+    USART_Configure(USART1, &usart_cfg);
+
+    USART_Enable(USART1);
+
+    // === DMA configuration for TX ===
+    DMA_Config dma_tx_cfg = {
+        .PeripheralAddress = (uint32_t)&USART1->TDR,
+        .MemoryAddress = (uint32_t)uart1_tx_buffer,
+        .DataLength = UART1_TX_BUFFER_SIZE,
+        .Direction = DMA_DIR_MEM_TO_PERIPH,
+        .PeripheralInc = DMA_PINC_DISABLE,
+        .MemoryInc = DMA_MINC_ENABLE,
+        .PeripheralDataAlignment = DMA_ALIGN_BYTE,
+        .MemoryDataAlignment = DMA_ALIGN_BYTE,
+        .Mode = DMA_MODE_NORMAL,
+        .Priority = DMA_PRIORITY_LOW
+    };
+
+    DMA_Configure(DMA1_Channel2, &dma_tx_cfg);
+
+    DMA_EnableIRQ(DMA1_Channel2);
+    DMA_Enable(DMA1_Channel2);
+
+    // === DMA configuration for RX ===
+    DMA_Config dma_rx_cfg = {
+        .PeripheralAddress = (uint32_t)&USART1->RDR,
+        .MemoryAddress = (uint32_t)uart1_rx_buffer,
+        .DataLength = UART1_RX_BUFFER_SIZE,
+        .Direction = DMA_DIR_PERIPH_TO_MEM,
+        .PeripheralInc = DMA_PINC_DISABLE,
+        .MemoryInc = DMA_MINC_ENABLE,
+        .PeripheralDataAlignment = DMA_ALIGN_BYTE,
+        .MemoryDataAlignment = DMA_ALIGN_BYTE,
+        .Mode = DMA_MODE_CIRCULAR,
+        .Priority = DMA_PRIORITY_HIGH
+    };
+
+    DMA_Configure(DMA1_Channel3, &dma_rx_cfg);
+
+    DMA_EnableIRQ(DMA1_Channel3);
+    DMA_Enable(DMA1_Channel3);
+
+    // === Enable USART1 DMA mode (TX + RX) ===
+    USART_EnableDmaTx(USART1);
+    USART_EnableDmaRx(USART1);
+
+    // Optionally enable USART1 IRQ if needed
+    NVIC_EnableIRQ(USART1_IRQn);
+}
