@@ -51,7 +51,7 @@ Artifacts in the repo:
 
   [![Power board schematic overview](./power_board/sch_overview.jpg)](./power_board/sch_overview.jpg)
 
-  > This JPEG export is provided **for quick viewing only** and may lag behind the  
+  > This JPEG export is provided **just for preview** and may lag behind the  
   > `sch.spl8` source project in terms of completeness or minor corrections.  
   > The sPlan file should be considered the primary, most up-to-date reference.
 
@@ -60,7 +60,6 @@ Artifacts in the repo:
   **Important note:** this is **not** a manufacturing-ready PCB:
   - element sizes and track widths may not match the original,
   - main purpose is to **match front/back layers and connections** for schematic reverse-engineering.
-
 
 ### Control board
 
@@ -120,14 +119,45 @@ Ghidra does **not** support the MC68HC11 instruction set out of the box, so you 
 
 ---
 
+## Internal photo gallery
+
+A few internal photos to give a visual overview of the hardware and component layout.
+
+### Power board views
+
+These images mainly show the **power board** and high-power section:
+
+| | |
+|---|---|
+| [<img src="./_img/46172w.jpg" alt="Power board view 1" width="350">](./_img/46172w.jpg) | [<img src="./_img/46173w.jpg" alt="Power board view 2" width="350">](./_img/46173w.jpg) |
+| [<img src="./_img/46174w.jpg" alt="Power board view 3" width="350">](./_img/46174w.jpg) | [<img src="./_img/prev_ctlbrd_rev.jpg" alt="Previous control board revision" width="350">](./_img/prev_ctlbrd_rev.jpg) |
+
+Click any thumbnail to open the full-resolution image.
+
+### Previous control-board revision
+
+On the last foto it is notable difference compared to the control board currently traced in this project:
+
+- This older revision **does not** have the mysterious IC marked **RA7606** (Fairchild), which is present on the board I’m reverse-engineering now.
+- RA7606 appears to be a **custom / semi-custom device** – there is no publicly available documentation that I could find so far. Its exact function is still under investigation.
+
+These photos are mainly for **visual identification of board revisions** and for cross-checking topology while working with the schematics and PCB projects.
+
+---
+
 ## Repository layout
 
 ```text
 _img/
   device.jpg                 – photo of the UPS (front/case)
+  46172w.jpg                 – internal power board photo
+  46173w.jpg                 – internal power board photo
+  46174w.jpg                 – internal power board photo
+  prev_ctlbrd_rev.jpg        – photo of previous control-board revision
 
 power_board/
   sch.spl8                   – reverse-drawn power board schematic (sPlan 8)
+  sch_overview.jpg           – JPEG export of the schematic (preview only)
   pcb/
     pcb.lay6_2.lay6          – Sprint-Layout 6 project for the power PCB (for reverse only)
 
@@ -145,6 +175,7 @@ rom_dasm/
                               (requires ghidra-hc11-lang)
 
 README.md                    – this file
+
 ```
 
 ## Status
