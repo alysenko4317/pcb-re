@@ -55,6 +55,10 @@ Each larger project has its own README with photos, schematic/layout notes, ROM 
   Reverse engineering of an **FSP150-AGB 15 V / 10 A SMPS**:  
   DC-side schematic in sPlan (synchronous rectifier + protections), microscope photos, and PCB views for repair / analysis.
 
+- [`ps_Bluetti_T200/README.md`](./ps_Bluetti_T200/README.md)  
+  Reverse engineering of the **Bluetti T200 AC charger** (for EB3A / EB55 / EB70 and similar):  
+  APFC (boost PFC) schematic in sPlan, based on the controller’s reference design with OEM tweaks, plus external device photos.
+  
 As new devices are added or existing projects become more complete, their per-device READMEs will be updated with:
 
 - current status of the reverse-engineered schematics and PCB tracing,
