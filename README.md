@@ -62,6 +62,10 @@ Each larger project has its own README with photos, schematic/layout notes, ROM 
 - [`bluetti_EB3A/README.md`](./bluetti_EB3A/README.md)  
   **Firmware reverse engineering** of the **Bluetti EB3A** portable power station (110 V model):  
   original inverter & panel firmware dumps, Ghidra analysis project, and an early C “re-created firmware” skeleton.
+
+- [`ups_Penxess-6 Mini-UPS_12.6v/charger_3s_12.6V/README.md`](./ups_Penxess-6%20Mini-UPS_12.6v/charger_3s_12.6V/README.md)  
+  Reverse engineering of the **Penxess-6 “Mini-UPS 12.6 V” 3S charger board**:  
+  full 3S (12.6 V) charger schematic in sPlan, JPEG preview, and PCB photos showing the recycled THT→SMD layout.
   
 As new devices are added or existing projects become more complete, their per-device READMEs will be updated with:
 
