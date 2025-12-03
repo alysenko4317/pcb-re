@@ -51,6 +51,10 @@ Each larger project has its own README with photos, schematic/layout notes, ROM 
   Reverse engineering of **Millennium HOHC-2500 8-step triac AVR** (no MCU, only analog logic & op-amps):  
   schematic in sPlan, PCB traced from photo templates, and internal photos for repair and study.
 
+- [`ps_FSP150-AGB_15v10a/README.md`](./ps_FSP150-AGB_15v10a/README.md)  
+  Reverse engineering of an **FSP150-AGB 15 V / 10 A SMPS**:  
+  DC-side schematic in sPlan (synchronous rectifier + protections), microscope photos, and PCB views for repair / analysis.
+
 As new devices are added or existing projects become more complete, their per-device READMEs will be updated with:
 
 - current status of the reverse-engineered schematics and PCB tracing,
