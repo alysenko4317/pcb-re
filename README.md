@@ -47,6 +47,10 @@ Each larger project has its own README with photos, schematic/layout notes, ROM 
   Reverse engineering of **XO PSA-700 power station / inverter**:  
   topology notes, schematics and internal photos (where available).
 
+- [`avr_Millennium HOHC-2500/README.md`](./avr_Millennium%20HOHC-2500/README.md)  
+  Reverse engineering of **Millennium HOHC-2500 8-step triac AVR** (no MCU, only analog logic & op-amps):  
+  schematic in sPlan, PCB traced from photo templates, and internal photos for repair and study.
+
 As new devices are added or existing projects become more complete, their per-device READMEs will be updated with:
 
 - current status of the reverse-engineered schematics and PCB tracing,
