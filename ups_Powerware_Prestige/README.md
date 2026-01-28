@@ -47,11 +47,13 @@ Artifacts in the repo:
   Reverse-drawn **schematic** of the power board in **sPlan 8** format.  
   > Status: ~**90% complete** – good enough to understand the topology, some minor details may still be missing.
 
-- Schematic preview for non-sPlan users (`./power_board/sch_overview.jpg`):  
+- Schematic preview for non-sPlan users (`./power_board/sch_overview.png`):  
 
-  [![Power board schematic overview](./power_board/sch_overview.jpg)](./power_board/sch_overview.jpg)
+  [![Power board schematic overview](./power_board/sch_overview.png)](./power_board/sch_overview.png)
 
-  > This JPEG export is provided **just for preview** and may lag behind the  
+  [![IGBT Gate Driver schematic overview](./control_board/gate_drv_sch.png)](./power_board/gate_drv_sch.png)
+  
+  > This PNGs export is provided **just for preview** and may lag behind the  
   > `sch.spl8` source project in terms of completeness or minor corrections.  
   > The sPlan file should be considered the primary, most up-to-date reference.
 
