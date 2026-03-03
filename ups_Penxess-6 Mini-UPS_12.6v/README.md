@@ -1,6 +1,6 @@
 # Penxess DC‑UPS: reverse engineering, teardown, and “file‑and‑fit” to a proper 12V (and not only)
 
-> This README is a new, expanded version of the project description. The old file in the repo was more like “notes about the 3S charger”, without the full story and without the whole upgrade path. fileciteturn3file2L1-L18  
+> This README is a new, expanded version of the project description. The old file in the repo was more like “notes about the 3S charger”, without the full story and without the whole upgrade path.
 > Here I’m just describing, in a human way (and a bit in my own style), how a “purely Chinese little box” turned into a more‑or‑less decent DC‑UPS module for my needs.
 
 ---
@@ -25,11 +25,11 @@ So if you actually need “12V as 12V”, the correct answer is **buck/boost** (
 
 So, the hero of this story is a DC‑UPS called **Penxess**.
 
-![Penxess DC‑UPS](img/1-device.jpg)
+<img src="img/1-device.jpg" alt="Penxess DC‑UPS" width="900"/>
 
 At some point I was looking for a UPS for my NAS. Consumption is around **45W** (the stock PSU is 65W, but my drives are 5400rpm — not the most hungry set). At that time the market was full of “router DC‑UPS” boxes rated 18–36W. And then I see this box: advertised as 60000 mAh, and output “12V 8A”. So of course I buy it.
 
-![Unboxing A](img/2-unpack-a.jpg)  |  ![Unboxing B](img/2-unpack-b.jpg)
+<img src="img/2-unpack-a.jpg" alt="Unboxing A" width="420"/>  |  <img src="img/2-unpack-b.jpg" alt="Unboxing B" width="420"/>
 
 From the first glance it’s a very “China‑China” device: everything in Chinese, stickers, labels… not exactly confidence‑inspiring. So naturally the first thing is: open it and see what’s inside. And after opening it I came to a few conclusions.
 
@@ -45,20 +45,20 @@ Charger PCB photos:
 
 | | |
 |---|---|
-| ![Charger PCB face](charger_3s_12.6V/pcb_face.jpg) | ![Charger PCB adjusted](charger_3s_12.6V/pcb_v2_adj.jpg) |
+| <img src="charger_3s_12.6V/pcb_face.jpg" alt="Charger PCB face" width="420"/> | <img src="charger_3s_12.6V/pcb_v2_adj.jpg" alt="Charger PCB adjusted" width="420"/> |
 
 I redrew the schematic (nothing exotic there, but it’s useful to capture it):
 
-![3S charger schematic](charger_3s_12.6V/sch_overview.jpg)
+<img src="charger_3s_12.6V/sch_overview.jpg" alt="3S charger schematic" width="900"/>
 
-> By the way, historically this is the part I documented first — the old README in the repo was basically about this. fileciteturn3file2L1-L18
+> By the way, historically this is the part I documented first — the old README in the repo was basically about this.
 
 ### The main “UPS” board in Penxess: almost empty
 
 And now the fun (and sad) part. Apart from the cells (the battery), inside there is **almost nothing**. The main board looks like “wiring + a couple of small add‑ons”: there’s a simple DC‑DC for USB 5V and a very primitive battery level indicator based on **LM324** (three thresholds / three “steps”).
 
-![Main board 1](IMG_1277_crop_2.jpg)  
-![Main board 2](IMG_1278_crop_2.jpg)
+<img src="pcb/pcb_face.jpg" alt="Main board 1" width="900"/>  
+<img src="pcb/pcb_back.jpg" alt="Main board 2" width="900"/>
 
 There’s also a funny detail with the indicator: one LED “25%” is basically always on until the BMS cuts the battery off on deep discharge. The other LEDs turn on at some battery voltage thresholds, but I never bothered to measure the exact levels — and later they stopped lighting up at all (either the divider resistors aged badly, or the LM324 itself died).
 
@@ -96,11 +96,11 @@ My first thought was to reuse the LM324 as a threshold detector and add a couple
 
 So I “scraped the bins” and found a ready‑made DC‑UPS board I had, built around some mysterious chip marked **CR123S**. It already does what I need, and it’s advertised as a “50W board” (the board says so). Realistically, I’d treat it as ~25–30W unless cooling is decent. Still, for my purposes it was a good base. So instead of hacking my own circuit, I decided to use this board:
 
-4-dc_ups-a.jpg | 4-dc_ups-b.jpg | 4-dc_ups-c.jpg
+<img src="img/4-dc_ups-a.jpg" alt="dc-ups" width="420"/> | <img src="img/4-dc_ups-b.jpg" alt="dc-ups" width="420"/> | <img src="img/4-dc_ups-c.jpg" alt="dc-ups" width="420"/>
 
 Adapting the Penxess main board was minimal: I only used a rotary tool to cut one trace between the switch and the board input to route things correctly:
 
-4-dc_ups-d.jpg
+<img src="img/4-dc_ups-d.jpg" alt="dc-ups" width="900"/>
 
 ---
 
@@ -138,12 +138,12 @@ Reasons:
 
 And the case actually had enough space. So I assembled a custom module of two DC‑UPS boards, shaped to fit the case:
 
-5-dc_ups_custom-a.JPG
+<img src="img/5-dc_ups_custom-a.JPG" alt="dc-ups" width="400"/>
 
 And the internal layout looks like this:
 
-5-dc_ups_custom-b.JPG  
-5-dc_ups_custom-c.JPG
+<img src="img/5-dc_ups_custom-b.JPG" alt="dc-ups" width="400"/>
+<img src="img/5-dc_ups_custom-c.JPG" alt="dc-ups" width="400"/>
 
 ---
 
@@ -151,8 +151,8 @@ And the internal layout looks like this:
 
 For the buck/boost role I had two candidates: one based on **LT3850**, and the other — something like “PL5501” class (the exact marking/model isn’t as important here as size and thermal behavior).
 
-![Buck/Boost candidate A](6-buck_boostb-a.jpg)  
-![Buck/Boost candidate B](6-buck_boostb-b.jpg)
+<img src="img/6-buck_boostb-a.jpg" alt="Buck/Boost candidate A" width="400"/>  
+<img src="img/6-buck_boostb-b.jpg" alt="Buck/Boost candidate B" width="400"/>
 
 The LT3850 option simply **didn’t fit** by dimensions, while the second one fit nicely.
 
@@ -162,12 +162,12 @@ There’s also the classic marketing story around it. Some sellers like to claim
 
 I ran it for heating and quickly realized the stock heatsink needs help. So I increased the heatsink area, adapting it to the available space in the case, and the board ended up looking like this:
 
-![Buck/Boost custom A](7-buck_boostb_custom_-a.JPG)  
-![Buck/Boost custom B](7-buck_boostb_custom_-b.JPG)
+<img src="img/7-buck_boostb_custom_-a.JPG" alt="Buck/Boost custom A" width="400"/>  
+<img src="img/7-buck_boostb_custom_-b.JPG" alt="Buck/Boost custom B" width="400"/>
 
 And the final “everything in its place” internal layout looks like this:
 
-![Final layout](7-buck_boostb_custom_-с.JPG)
+<img src="img/7-buck_boostb_custom_-c.JPG" alt="Final layout" width="400"/>
 
 ---
 
