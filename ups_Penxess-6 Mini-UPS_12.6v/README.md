@@ -25,11 +25,11 @@ So if you actually need “12V as 12V”, the correct answer is **buck/boost** (
 
 So, the hero of this story is a DC‑UPS called **Penxess**.
 
-<img src="img/1-device.jpg" alt="Penxess DC‑UPS" width="900"/>
+<img src="img/1-device.jpg" alt="Penxess DC‑UPS" />
 
 At some point I was looking for a UPS for my NAS. Consumption is around **45W** (the stock PSU is 65W, but my drives are 5400rpm — not the most hungry set). At that time the market was full of “router DC‑UPS” boxes rated 18–36W. And then I see this box: advertised as 60000 mAh, and output “12V 8A”. So of course I buy it.
 
-<img src="img/2-unpack-a.jpg" alt="Unboxing A" width="420"/>  |  <img src="img/2-unpack-b.jpg" alt="Unboxing B" width="420"/>
+<img src="img/2-unpack-a.jpg" alt="Unboxing A" width="400"/>  |  <img src="img/2-unpack-b.jpg" alt="Unboxing B" width="400"/>
 
 From the first glance it’s a very “China‑China” device: everything in Chinese, stickers, labels… not exactly confidence‑inspiring. So naturally the first thing is: open it and see what’s inside. And after opening it I came to a few conclusions.
 
@@ -49,7 +49,7 @@ Charger PCB photos:
 
 I redrew the schematic (nothing exotic there, but it’s useful to capture it):
 
-<img src="charger_3s_12.6V/sch_overview.jpg" alt="3S charger schematic" width="900"/>
+<img src="charger_3s_12.6V/sch_overview.jpg" alt="3S charger schematic" />
 
 > By the way, historically this is the part I documented first — the old README in the repo was basically about this.
 
@@ -57,8 +57,8 @@ I redrew the schematic (nothing exotic there, but it’s useful to capture it):
 
 And now the fun (and sad) part. Apart from the cells (the battery), inside there is **almost nothing**. The main board looks like “wiring + a couple of small add‑ons”: there’s a simple DC‑DC for USB 5V and a very primitive battery level indicator based on **LM324** (three thresholds / three “steps”).
 
-<img src="pcb/pcb_face.jpg" alt="Main board 1" width="900"/>  
-<img src="pcb/pcb_back.jpg" alt="Main board 2" width="900"/>
+<img src="pcb/pcb_face.jpg" alt="Main board 1" width="800"/>  
+<img src="pcb/pcb_back.jpg" alt="Main board 2" width="800"/>
 
 There’s also a funny detail with the indicator: one LED “25%” is basically always on until the BMS cuts the battery off on deep discharge. The other LEDs turn on at some battery voltage thresholds, but I never bothered to measure the exact levels — and later they stopped lighting up at all (either the divider resistors aged badly, or the LM324 itself died).
 
@@ -96,11 +96,11 @@ My first thought was to reuse the LM324 as a threshold detector and add a couple
 
 So I “scraped the bins” and found a ready‑made DC‑UPS board I had, built around some mysterious chip marked **CR123S**. It already does what I need, and it’s advertised as a “50W board” (the board says so). Realistically, I’d treat it as ~25–30W unless cooling is decent. Still, for my purposes it was a good base. So instead of hacking my own circuit, I decided to use this board:
 
-<img src="img/4-dc_ups-a.jpg" alt="dc-ups" width="420"/> | <img src="img/4-dc_ups-b.jpg" alt="dc-ups" width="420"/> | <img src="img/4-dc_ups-c.jpg" alt="dc-ups" width="420"/>
+<img src="img/4-dc_ups-a.jpg" alt="dc-ups" width="400"/> | <img src="img/4-dc_ups-b.jpg" alt="dc-ups" width="400"/> | <img src="img/4-dc_ups-c.jpg" alt="dc-ups" width="400"/>
 
 Adapting the Penxess main board was minimal: I only used a rotary tool to cut one trace between the switch and the board input to route things correctly:
 
-<img src="img/4-dc_ups-d.jpg" alt="dc-ups" width="900"/>
+<img src="img/4-dc_ups-d.jpg" alt="dc-ups" width="400"/>
 
 ---
 
