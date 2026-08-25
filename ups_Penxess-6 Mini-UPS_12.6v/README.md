@@ -60,7 +60,7 @@ And now the fun (and sad) part. Apart from the cells (the battery), inside there
 <img src="pcb/pcb_face.jpg" alt="Main board 1" width="800"/>  
 <img src="pcb/pcb_back.jpg" alt="Main board 2" width="800"/>
 
-There’s also a funny detail with the indicator: one LED “25%” is basically always on until the BMS cuts the battery off on deep discharge. The other LEDs turn on at some battery voltage thresholds, but I never bothered to measure the exact levels — and later they stopped lighting up at all (either the divider resistors aged badly, or the LM324 itself died).
+There’s also a funny detail with the indicator: one LED “25%” is basically always on until the BMS cuts the battery off on deep discharge. The other LEDs turn on at some battery voltage thresholds, giving a very simple stepped indication of battery voltage / approximate charge level.
 
 And that’s it: input, output and the battery are effectively all paralleled together. Which means we get these features:
 
@@ -118,7 +118,7 @@ Then I tested it myself, and here are the results:
 
 3) There is a charge indicator (red LED). Testing showed the board does **not** keep the battery at full charge all the time: charging stops at **12.6V**, and the charger kicks in again when battery voltage drops below **12.4V**.
 
-4) There is also a “discharge” LED (green), but it behaves weirdly — exactly like the review says. It lit up at the beginning, then went off and never lit again. Either there are extra conditions nobody knows, or it just dies, or the LED current is chosen wrong. (On another identical board that LED still works for now.)
+4) There is also a “discharge” LED (green). At first its behavior looked weird: sometimes it was on, sometimes off, and on two identical boards the indication was not always the same. Later it became clear that this is not just a binary status LED — its brightness is **analog and depends on load current**. That turned out to be much more useful than I initially expected, because this signal can be converted into a proper load-level indication.
 
 5) The MOSFETs needed a heatsink. I made one from a spare SSD heatsink kit. The board is advertised as 4A, but I limited testing to **3A** (~30W), which is plenty for a router. At that current the heatsink warms up to about “~50°C by finger”.
 
@@ -187,11 +187,31 @@ And to make life more “fun”, during assembly and testing my battery **BMS bo
 
 ---
 
-## About indicators (and why I didn’t bring them to the front panel yet)
+## Indicators: brought outside, plus a 5-step load meter
 
-All used boards have pretty handy status/error LEDs. Ideally it would be nice to bring them to the front panel so you can see statuses without opening the case.
+The two CR123S UPS boards have charge/discharge indication LEDs, and I eventually **did bring those signals out** instead of leaving them buried inside the case.
 
-But for now I postponed it: it’s SMD, you’d have to add wires, and that’s another layer of “careful hackery” I just didn’t want to spend time on at this stage.
+The more interesting part was the discharge indication. As mentioned above, it turned out to be **analog**: the LED drive level changes with load current. Rather than just exposing that varying-brightness LED, I used the signal as an input for a small comparator ladder and built a **5-step load indicator** around LM324-class op-amps/comparators.
+
+The circuit was assembled mostly in SMD, so from the component side there is almost nothing to see apart from the IC itself:
+
+<img src="img/load_level_lm324.jpg" alt="Load level indicator, component side" width="600"/>
+
+Most of the resistor network and wiring is on the solder side:
+
+<img src="img/load_level_smd.jpg" alt="Load level indicator, solder side" width="600"/>
+
+So now the device has a dedicated visual indication of output load instead of relying on the raw analog brightness of the original discharge LED.
+
+I also redrew the **overall schematic of the modified device**, not just this indicator. The original Penxess electronics had little more than the battery-voltage indicator; the new schematic shows the added UPS modules, the buck/boost stage, the load-level indicator, and how the added blocks are interconnected:
+
+<img src="img/load_level_sch.jpg" alt="Modified Penxess DC-UPS overall schematic and load-level indicator" />
+
+### One remaining question: how exactly do the two UPS boards share work?
+
+According to the Chinese documentation, these CR123S modules can be connected in parallel, and in practice they clearly do share at least part of the work. Each module charges at roughly **1A**, while with two boards in parallel I see about **2.2A total** from the laboratory power supply.
+
+What is still not completely clear is how their internal control logic interacts in parallel. For example, the **charge/discharge LEDs usually light only on one of the two modules**, even though both boards are connected and contributing. At other times I have seen the corresponding LEDs light on **both** boards. So electrically the parallel configuration works, but the exact current-sharing / state-selection logic between two independent modules remains an open question.
 
 ---
 
@@ -201,7 +221,9 @@ In the end, Penxess went from a “parallel nonsense” into a more meaningful m
 - charge/discharge logic is now handled by the CR123S DC‑UPS boards (two in parallel),
 - buck/boost is installed in the case and has proper cooling,
 - voltage adjustment is outside,
-- power limit is set around ~47W (for stable 45W).
+- power limit is set around ~47W (for stable 45W),
+- charge/discharge status signals are brought out,
+- and the analog discharge signal is converted into a 5-step load indicator.
 
 And the most important part: it’s no longer “output = battery”, so there is a real chance to get not only a router UPS, but a more universal DC power module for different scenarios.
 
