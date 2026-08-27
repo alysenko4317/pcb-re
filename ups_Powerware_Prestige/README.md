@@ -36,32 +36,59 @@ The UPS is split into two main boards:
 
 ### Power board
 
-- No mains-frequency transformer – the design uses **boost converters on inductors** (classic step-up topology).
+- No mains-frequency transformer is used in the DC/HV-DC conversion path. Instead, the UPS uses **high-power classic boost-converter stages built around inductors**.
 - Battery pack: **60 V** DC.
-- Two boost stages (positive and negative rails) generate approximately **+310 V / –310 V** DC.
+- Two boost stages generate approximately **+310 V / –310 V** DC rails.
 - A subsequent H-bridge / inverter stage synthesizes the output **sine wave** from the ±310 V rails.
+
+This is a distinctly older design, typical of equipment from the 1990s: even the isolated IGBT gate drivers are built from discrete transistors, diodes, zener diodes, resistors and capacitors rather than dedicated gate-driver ICs. Technologically it is dated, but from an engineering and reverse-engineering point of view it is quite interesting.
 
 Artifacts in the repo:
 
 - `./power_board/sch.spl8`  
   Reverse-drawn **schematic** of the power board in **sPlan 8** format.  
-  > Status: ~**90% complete** – good enough to understand the topology, some minor details may still be missing.
+  > Status: ~**90% complete** – good enough to understand the topology, although some minor details may still be missing.
 
-- Schematic preview for non-sPlan users (`./power_board/sch_overview.png`):  
+- [`./power_board/sch.svg`](./power_board/sch.svg)  
+  SVG export of the same schematic for convenient viewing directly on GitHub. Unlike the old overview image, this is the **full power-board schematic**, including the power stages, gate drivers and associated circuitry.
 
-  [![Power board schematic overview](./power_board/sch_overview.png)](./power_board/sch_overview.png)
+  [![Power board schematic](./power_board/sch.svg)](./power_board/sch.svg)
 
-  [![IGBT Gate Driver schematic overview](./control_board/gate_drv_sch.png)](./power_board/gate_drv_sch.png)
-  
-  > This PNGs export is provided **just for preview** and may lag behind the  
-  > `sch.spl8` source project in terms of completeness or minor corrections.  
-  > The sPlan file should be considered the primary, most up-to-date reference.
+  > The **sPlan file remains the primary editable source**. The SVG is intended as a convenient viewable/exported version and is kept synchronized with it.
+
+### IGBT gate driver
+
+One isolated gate-driver channel is also available as a separate schematic image:
+
+[![IGBT gate driver schematic](./control_board/gate_drv_sch.png)](./control_board/gate_drv_sch.png)
+
+The driver is implemented entirely from discrete components and uses a **high-frequency isolation transformer**. The primary-side transistors **Q11/Q12** excite the transformer; Q12 is driven by the controller signal, which appears to be carried as a burst/high-frequency-modulated waveform rather than as a static logic level.
+
+On the isolated secondary side, the same transformer provides both **power and control information** for the driver:
+
+- **D16.1 / C61** generate the approximately **+12 V** rail;
+- **D9.1 / C28** generate the approximately **−12 V** rail;
+- **Q14/Q15** form the output stage connected to the power IGBT gate, with Q15 providing the active gate-discharge path.
+
+While high-frequency energy is present on the transformer secondary, C61 and C28 charge through their rectifier paths. Once the total isolated supply span becomes high enough, the **D8 (21 V) / Q13** threshold network changes state. Q13 then drives Q14, causing the IGBT gate to be charged. At the same time, Q17 is driven on through R53 and provides regenerative feedback that keeps the driver in its **ON state**. In other words, this part of the circuit behaves as a small discrete latch rather than requiring the transformer waveform itself to source the IGBT gate continuously.
+
+Turn-off is handled by **Q16**. While the required high-frequency component is still present on the transformer secondary, negative excursions through **D16.2** prevent **C27** from charging to the Q16 turn-on threshold. When those pulses disappear, C27 charges through **R48**, Q16 turns on, Q17 is forced off and Q15 is driven on. The circuit therefore changes to its other stable state and actively discharges the power IGBT gate. The energy stored in C61/C28 allows this turn-off action to remain available briefly even after excitation of the isolation transformer has stopped.
+
+This arrangement is an interesting example of an isolated, transformer-powered **set/reset gate driver built entirely from discrete components**.
 
 - `./power_board/pcb/pcb.lay6_2.lay6`  
   Power PCB in **Sprint-Layout 6** format, traced from photo templates.  
   **Important note:** this is **not** a manufacturing-ready PCB:
   - element sizes and track widths may not match the original,
   - main purpose is to **match front/back layers and connections** for schematic reverse-engineering.
+
+### Repair that led to this reverse engineering
+
+This project started as a repair rather than as a purely academic reverse-engineering exercise. I bought this UPS, powered it up, and after roughly ten minutes it stopped starting normally and began entering a fault state. That made it necessary to trace the power circuitry and understand the gate-driver logic.
+
+The UPS was ultimately returned to working condition. The fault was localized to the isolated gate driver for the **−370 V-side power IGBT channel**: **Q16 had failed**. Because Q16 is responsible for detecting the disappearance of the transformer excitation and switching the discrete latch into the gate-discharge state, its failure prevented the channel from operating correctly. Replacing the faulty device restored normal operation.
+
+The repair was the main reason the power-board schematic, PCB tracing and the separate gate-driver schematic were produced.
 
 ### Control board
 
@@ -159,11 +186,12 @@ _img/
 
 power_board/
   sch.spl8                   – reverse-drawn power board schematic (sPlan 8)
-  sch_overview.jpg           – JPEG export of the schematic (preview only)
+  sch.svg                    – SVG export of the full power-board schematic
   pcb/
     pcb.lay6_2.lay6          – Sprint-Layout 6 project for the power PCB (for reverse only)
 
 control_board/
+  gate_drv_sch.png           – schematic of one isolated IGBT gate-driver channel
   pcb_prestigio_ctrl.lay6    – Sprint-Layout 6 project for the control PCB (WIP)
   pano/
     panorama_face.jpg        – control board, component side
