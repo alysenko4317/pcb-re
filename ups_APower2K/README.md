@@ -30,4 +30,53 @@ The unit arrived in very poor condition after an apparently unsuccessful previou
 - the EG8026 controller;
 - part of the EG8026 surrounding circuitry.
 
-Other files in this directory are currently mostly datasheets, reference materials, and miscellaneous notes. The repository is still being organized and may be updated as the reverse-engineering work progresses.
+## Repository Materials
+
+In addition to the reconstructed schematic, the repository contains PCB photographs, configuration dumps, software utilities, and other supporting materials collected during the reverse-engineering work.
+
+### PCB photographs
+
+Photos of the particular unit used for this reverse-engineering work:
+
+- [`pcb/micro/ctrl_board_micro.jpg`](pcb/micro/ctrl_board_micro.jpg) — control board, photographed under a microscope;
+- [`pcb/micro/main_board_mcu_area.jpg`](pcb/micro/main_board_mcu_area.jpg) — part of the main board around the MCU and the control circuitry for the DC/SOLAR charger power bridge, photographed under a microscope;
+- [`pcb/IMG_1303_C2.jpg`](pcb/IMG_1303_C2.jpg) — main inverter power board, back side. This image is used as a reference/template in Sprint-Layout while tracing the schematic;
+- [`pcb/IMG_1305_C2.jpg`](pcb/IMG_1305_C2.jpg) — main inverter power board, component side. This image is also used as a reference/template in Sprint-Layout while tracing the schematic.
+
+![Control board under microscope](pcb/micro/ctrl_board_micro.jpg)
+
+![Main board MCU and DC/SOLAR charger control area](pcb/micro/main_board_mcu_area.jpg)
+
+![Main inverter power board — back side](pcb/IMG_1303_C2.jpg)
+
+![Main inverter power board — component side](pcb/IMG_1305_C2.jpg)
+
+Additional reference photographs, not taken from my own unit:
+
+- [`orig/ctrl_board.jpg`](orig/ctrl_board.jpg) — control board;
+- [`orig/main_inv_board.jpg`](orig/main_inv_board.jpg) — overall perspective view of the main inverter board;
+- [`orig/BMS.jpg`](orig/BMS.jpg) — BMS board.
+
+![Reference control board photo](orig/ctrl_board.jpg)
+
+![Reference main inverter board photo](orig/main_inv_board.jpg)
+
+![Reference BMS board photo](orig/BMS.jpg)
+
+The files under `orig/` listed above were obtained from the **gsm.in.ua** forum and are included as reference material.
+
+### Software and firmware-related files
+
+- `orig/Host_Software_EG1615_EG8026_Lite_V2.3.2.exe` — manufacturer utility for working with the EG1615 and EG8026 devices, including configuration/programming functions;
+- `firmware/EG8026_APP.zip` — appears to contain manufacturer firmware/source code for the EG8026. This has **not been verified**; the archive was originally found on the **gsm.in.ua** forum.
+
+### Configuration dumps
+
+The repository also contains configuration-parameter dumps for the EG1615/EG8026-related devices:
+
+- `config_dumps/stock/` — default/stock configuration dumps read from separately purchased devices;
+- `config_dumps/apower2000/` — configuration dumps read from the APower 2000 unit.
+
+The APower-specific configurations may differ from the stock defaults in parameters that affect actual operation, such as battery-voltage thresholds, power-calculation coefficients, and other calibration or protection-related values. For that reason, these dumps may be useful when comparing replacement devices or investigating behavior that cannot be explained by the external circuit alone.
+
+The repository is still being organized and may be updated as the reverse-engineering work progresses.
