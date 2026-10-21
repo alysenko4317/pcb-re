@@ -1,0 +1,54 @@
+{
+  "source": "Powerware 01.30.S",
+  "source_sha256": "8e364da193da4594beed698330f15635eb413799f6cf79fd30fa54121b88d357",
+  "record_counts": {
+    "0": 1,
+    "3": 2810,
+    "7": 1
+  },
+  "checksums": "all valid",
+  "address_units": "16-bit words; bytes within each word retained in original order (little endian)",
+  "entry_record_address": "0xa4",
+  "spaces": {
+    "P": {
+      "file": "powerware_01_30_P_word_000000-020001_LE.bin",
+      "base_word_address": "0x0",
+      "last_word_address": "0x20001",
+      "binary_size": 262148,
+      "present_bytes": 261210,
+      "filler_bytes": 938,
+      "present_word_ranges": [
+        [
+          "0x0",
+          "0x1fe20"
+        ],
+        [
+          "0x1fff6",
+          "0x20001"
+        ]
+      ],
+      "sha256": "67ffcf9b5cb3aeaff0e240571fa3cd3c726033e9396a8bc5eaee108e240a4bab",
+      "record_roundtrip": "passed"
+    },
+    "X": {
+      "file": "powerware_01_30_X_word_002000-002FFD_LE.bin",
+      "base_word_address": "0x2000",
+      "last_word_address": "0x2ffd",
+      "binary_size": 8188,
+      "present_bytes": 8000,
+      "filler_bytes": 188,
+      "present_word_ranges": [
+        [
+          "0x2000",
+          "0x2f9e"
+        ],
+        [
+          "0x2ffd",
+          "0x2ffd"
+        ]
+      ],
+      "sha256": "53156c22705e7b87afbe8b826b8f5d9ed1cd568a8cb19aa91a9ee9da4b1c8220",
+      "record_roundtrip": "passed"
+    }
+  }
+}

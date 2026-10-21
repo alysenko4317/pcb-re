@@ -1,0 +1,1845 @@
+space	word_address	byte_in_word	text
+P	0x00011D	0	Inverter AC over voltage
+P	0x000133	1	Inverter AC under voltage
+P	0x00014A	0	Bypass AC over voltage
+P	0x000160	1	Bypass AC under voltage
+P	0x000177	0	Bypass under or over
+P	0x000182	0	frequency
+P	0x00018D	1	Input AC over voltage
+P	0x0001A4	0	Input AC under voltage
+P	0x0001BA	1	Input under or over
+P	0x0001C5	0	frequency
+P	0x0001D1	0	Remote Emergency Power
+P	0x0001E7	1	Building alarm 1
+P	0x0001FE	0	Output overload
+P	0x000214	1	Inverter output over
+P	0x00021F	1	current
+P	0x00022B	0	DC link over voltage
+P	0x000241	1	DC link under voltage
+P	0x000258	0	Rectifier failed
+P	0x00026E	1	Inverter fault
+P	0x000285	0	Charge failure
+P	0x00029B	1	Inverter Uncalibrated
+P	0x0002B2	0	DC voltage Uncalibrated
+P	0x0002C8	1	EEPROM failure
+P	0x0002DF	0	Shutdown imminent
+P	0x0002F5	1	Battery low
+P	0x00030C	0	Utility failure
+P	0x000322	1	Output short circuit
+P	0x000339	0	Utility not present
+P	0x00034F	1	Battery DC over voltage
+P	0x000366	0	Heatsink overtemperature
+P	0x00037C	1	To bypass command
+P	0x000393	0	From bypass command
+P	0x0003A9	1	Bypass not available
+P	0x0003C0	0	Parallel CAN bus failure
+P	0x0003D6	1	Loss of redundancy
+P	0x0003ED	0	Inverter on
+P	0x000403	1	On manual/maintenance
+P	0x00040F	0	bypass
+P	0x00041A	0	Battery needs service
+P	0x000430	1	Level 2 overload
+P	0x000447	0	Level 3 overload
+P	0x00045D	1	Level 4 overload
+P	0x000474	0	UPS on battery
+P	0x00048A	1	UPS on bypass
+P	0x0004A1	0	UPS on command
+P	0x0004B7	1	UPS off command
+P	0x0004CE	0	Low battery shutdown
+P	0x0004E4	1	DC start occurred
+P	0x0004FB	0	Battery test failed 
+P	0x000506	0	(battery support test)
+P	0x000511	1	Fan failure
+P	0x000528	0	Site wiring fault
+P	0x00053E	1	Batteries disconnected
+P	0x000555	0	Ambient undertemperature
+P	0x00056B	1	Ambient overtemperature
+P	0x000582	0	Modem failed
+P	0x000598	1	Incomming modem call
+P	0x0005A3	1	started
+P	0x0005AF	0	Outgoing modem call started
+P	0x0005C5	1	Modem connection
+P	0x0005CE	1	established
+P	0x0005DC	0	Modem call completion
+P	0x0005E7	1	failed
+P	0x0005F2	1	Autocalibration Failed
+P	0x000609	0	Selective trip
+P	0x00061F	1	Configuration error
+P	0x000636	0	Redundancy overload
+P	0x00064C	1	In high efficiency mode
+P	0x000663	0	UPS on normal
+P	0x000679	1	Not enough units ready
+P	0x000690	0	Clock set
+P	0x0006A6	1	DC link imbalance
+P	0x0006BD	0	Parallel unit number error
+P	0x0006D3	1	Auto Calibration Active
+P	0x0006EA	0	UPS off
+P	0x000700	1	Heatsink overtemperature
+P	0x00070D	1	shutdown
+P	0x000717	0	Output overload shutdown
+P	0x00072D	1	Bypass failure shutdown
+P	0x000744	0	Surtension AC A.S.I
+P	0x00075A	1	Tension AC basse A.S.I
+P	0x000771	0	Surtension AC Bypass
+P	0x000787	1	Tension AC basse Bypass
+P	0x00079E	0	Tension AC basse Entr
+P	0x0007B4	1	Surtension AC Entr
+P	0x0007CB	0	Tension AC basse Entr
+P	0x0007E2	1	faut Fr
+P	0x0007E6	1	quence sur
+P	0x0007FA	0	t d'urgence actif
+P	0x00080E	1	Alarme local 1
+P	0x000825	0	Surcharge en sortie
+P	0x00083B	1	Surcharge courant de
+P	0x000846	1	sortie redresseur
+P	0x000852	0	Surtension DC link
+P	0x000868	1	Soustension DC link
+P	0x000880	0	faut redresseur
+P	0x000896	1	faut inverseur
+P	0x0008AD	0	faut charge
+P	0x0008C2	1	Inverseur non calibr
+P	0x0008D9	0	Tension DC non calibr
+P	0x0008F0	1	faut EEPROM
+P	0x000908	0	t imminent
+P	0x00091C	1	Batterie basse
+P	0x000934	0	faut secteur
+P	0x000949	1	Cout circuit en sortie
+P	0x000960	0	Manque secteur
+P	0x000976	1	Surtension batterie
+P	0x00098F	1	rature dissipateur
+P	0x000999	1	thermique
+P	0x0009A3	1	Commande vers bypass
+P	0x0009BA	0	Commande venant du
+P	0x0009C4	0	bypass
+P	0x0009D0	1	Bypass non disponible
+P	0x0009E7	0	Defaut bus CAN parallele
+P	0x0009FD	1	Perte de redondance
+P	0x000A14	0	Inverseur sous tension
+P	0x000A2A	1	Sur bypass manuel de 
+P	0x000A36	0	maintenance
+P	0x000A41	0	Entretien batterie demand
+P	0x000A57	1	Surcharge niveau 2
+P	0x000A6E	0	Surcharge niveau 3
+P	0x000A84	1	Surcharge niveau 4
+P	0x000A9B	0	A.S.I. sur batterie
+P	0x000AB1	1	A.S.I. sur bypass
+P	0x000AC8	0	Commande A.S.I allum
+P	0x000ADE	1	Commande A.S.I 
+P	0x000AE6	1	teinte
+P	0x000AF7	0	t A.S.I. tension
+P	0x000B00	0	batterie basse
+P	0x000B0C	1	marrage DC effectu
+P	0x000B22	0	Echec test de batterie 
+P	0x000B2E	1	(test support
+P	0x000B39	1	faut ventilateur
+P	0x000B50	0	faut de c
+P	0x000B55	0	blage
+P	0x000B58	1	phase/neutre
+P	0x000B65	1	Batteries d
+P	0x000B6B	1	connect
+P	0x000B7E	1	rature ambiante basse
+P	0x000B92	1	Surtemperature ambiente
+P	0x000BAA	0	faut modem
+P	0x000BC0	1	but appel entrant Modem
+P	0x000BD7	0	but appel sortant Modem
+P	0x000BEC	1	Connexion Modem 
+P	0x000BF5	0	tablie
+P	0x000C04	0	faut 
+P	0x000C07	0	tablissement appel
+P	0x000C11	0	Modem
+P	0x000C1A	0	chec autocalibration
+P	0x000C30	0	Selective trip
+P	0x000C46	1	Erreur configuration
+P	0x000C5D	0	Surcharge redondance
+P	0x000C73	1	En mode haut rendement
+P	0x000C8A	0	A.S.I sur mode normal
+P	0x000CA0	1	Modules disponibles
+P	0x000CAB	0	insuffisants
+P	0x000CB7	0	Mise 
+P	0x000CBA	0	 l'heure
+P	0x000CCF	1	quilibre DC link
+P	0x000CE4	0	Erreur numero de module
+P	0x000CF0	1	parall
+P	0x000CFA	1	Auto calibration active
+P	0x000D11	0	A.S.I 
+P	0x000D14	1	teinte
+P	0x000D29	1	t surchauffe dissipateur
+P	0x000D36	1	thermique
+P	0x000D40	0	t pour surcharge sortie
+P	0x000D56	1	t pour d
+P	0x000D5B	0	faut bypass
+P	0x000D6B	0	Tensi
+P	0x000D6E	0	n CA inversor alta
+P	0x000D81	1	Tensi
+P	0x000D84	1	n CA inversor baja
+P	0x000D98	0	Tensi
+P	0x000D9B	0	n CA desviacion alta
+P	0x000DAE	1	Tensi
+P	0x000DB1	1	n CA desviacion baja
+P	0x000DC5	0	Frecuencia desviacion alta
+P	0x000DD3	0	o baja
+P	0x000DDB	1	Tensi
+P	0x000DDE	1	n entrada CA alta
+P	0x000DF2	0	Tensi
+P	0x000DF5	0	n entrada CA baja
+P	0x000E08	1	Frecuencia entrada alta
+P	0x000E15	0	o baja
+P	0x000E1F	0	Parada de emergencia
+P	0x000E2A	0	remota
+P	0x000E35	1	Alarma 1 de edificio
+P	0x000E4C	0	Sobrecarga en salida
+P	0x000E62	1	Sobreintensidad salida
+P	0x000E6E	1	inversor
+P	0x000E79	0	DC link over voltage
+P	0x000E8F	1	DC link under voltage
+P	0x000EA6	0	Rectifier failed
+P	0x000EBC	1	Inverter fault
+P	0x000ED3	0	Charge failure
+P	0x000EE9	1	Inverter Uncalibrated
+P	0x000F00	0	DC voltage Uncalibrated
+P	0x000F16	1	EEPROM failure
+P	0x000F2D	0	Parada inminente
+P	0x000F43	1	Bater
+P	0x000F46	1	a baja
+P	0x000F5A	0	Fallo de red
+P	0x000F70	1	Cortocircuito en salida
+P	0x000F87	0	Red de entrada ausente
+P	0x000F9D	1	Tensi
+P	0x000FA0	1	n CC bater
+P	0x000FA6	0	a alta
+P	0x000FB4	0	Heatsink overtemperature
+P	0x000FCA	1	Comando hacia bypass
+P	0x000FE1	0	From bypass command
+P	0x000FF7	1	Bypass no disponible
+P	0x00100E	0	Fallo en CAN bus paralelo
+P	0x001025	1	rdida de redundancia
+P	0x00103B	0	Inverter on
+P	0x001051	1	Bypass manual de
+P	0x00105A	1	mantenimiento
+P	0x001068	0	Las bater
+P	0x00106D	0	as requieren
+P	0x001074	0	mantenimiento
+P	0x00107E	1	Level 2 overload
+P	0x001095	0	Level 3 overload
+P	0x0010AB	1	Level 4 overload
+P	0x0010C2	0	SAI en bater
+P	0x0010D8	1	SAI en Bypass
+P	0x0010EF	0	UPS on command
+P	0x001105	1	UPS off command
+P	0x00111C	0	Parada por bater
+P	0x001124	1	a baja
+P	0x001132	1	DC start occurred
+P	0x001149	0	Fallo en test de bater
+P	0x001156	1	(test efectuado)
+P	0x00115F	1	Fan failure
+P	0x001176	0	Fallo de instalaci
+P	0x00117F	1	n fase
+P	0x001183	1	y neutro
+P	0x00118C	1	Bater
+P	0x00118F	1	a desconectada
+P	0x0011A3	0	Temperatura ambiente baja
+P	0x0011B9	1	Sobretemperatura ambiente
+P	0x0011D0	0	Fallo de m
+P	0x0011E6	1	Incoming modem call
+P	0x0011F1	0	started
+P	0x0011FD	0	Outgoing modem call started
+P	0x001213	1	Modem connection
+P	0x00121C	1	established
+P	0x00122A	0	Modem call completion
+P	0x001235	1	failed
+P	0x001240	1	Fallo de calibraci
+P	0x00124B	1	automatica
+P	0x001257	0	Disparo selectivo
+P	0x00126D	1	Configuration error
+P	0x001284	0	Sobrecarga en redundancia
+P	0x00129A	1	In high efficiency mode
+P	0x0012B1	0	UPS on normal
+P	0x0012C7	1	No hay suficientes m
+P	0x0012D2	0	dulos
+P	0x0012DE	0	Clock set
+P	0x0012F4	1	DC link imbalance
+P	0x00130B	0	Error en n
+P	0x001310	1	mero de
+P	0x001316	0	dulo paralelo
+P	0x001321	1	Auto Calibration Active
+P	0x001338	0	UPS off
+P	0x00134E	1	Heatsink overtemperature
+P	0x00135B	1	shutdown
+P	0x001365	0	Output overload shutdown
+P	0x00137B	1	Bypass failure shutdown
+P	0x001392	0	Wechselrichter 
+P	0x00139A	0	berspannung
+P	0x0013A8	1	Wechselrichter
+P	0x0013B0	1	Unterspannung
+P	0x0013BF	0	Bypass 
+P	0x0013C3	0	berspannung
+P	0x0013D5	1	Bypass Unterspannung
+P	0x0013EC	0	Bypass 
+P	0x0013F0	0	ber- oder
+P	0x0013F5	1	Unterfrequenz
+P	0x001402	1	Eing. 
+P	0x001406	0	berspannung
+P	0x001419	0	Eing. Unterspannung
+P	0x00142F	1	Eingang 
+P	0x001434	0	ber- oder
+P	0x001439	1	Unterfrequenz
+P	0x001446	0	Externer Notaus
+P	0x00145E	1	udealarm 1
+P	0x001473	0	Ausgang 
+P	0x001477	1	berlast
+P	0x001489	1	Wechselr.Ausgang 
+P	0x001492	1	berstrom
+P	0x0014A0	0	DC Link 
+P	0x0014A4	1	berspannung
+P	0x0014B6	1	DC Link Unterspannung
+P	0x0014CD	0	Gleichrichter Fehler
+P	0x0014E3	1	Wechselrichter Fehler
+P	0x0014FA	0	Fehler Ladeger
+P	0x001510	1	Wechselrichter unkalibriert
+P	0x001527	0	DC Bus unkalibriert
+P	0x00153D	1	EEPROM Fehler
+P	0x001554	0	USV Abschaltvorgang aktiv
+P	0x00156A	1	Batterie schwach
+P	0x001581	0	Netz Eing. Fehler
+P	0x001597	1	Kurzschl.am Ausgang
+P	0x0015AE	0	Kein Netz am Eing.
+P	0x0015C4	1	Batterie 
+P	0x0015C9	1	berspg.
+P	0x0015DE	0	rper 
+P	0x0015E1	0	bertemperatur
+P	0x0015F1	1	Kommando auf Bypass 
+P	0x001608	0	Kommando auf
+P	0x00160F	0	Normalbetrieb
+P	0x00161E	1	Bypass nicht verf
+P	0x001635	0	Parallel CAN Bus Fehler
+P	0x00164B	1	Redundanzverlust
+P	0x001662	0	Wechselrichter ein
+P	0x001678	1	Auf manuellem
+P	0x001680	0	/Wartungsbypass
+P	0x00168F	0	Batterie Service n
+P	0x0016A6	0	berlast Level 2
+P	0x0016BC	1	berlast Level 3
+P	0x0016D3	0	berlast Level 4
+P	0x0016E9	0	USV auf Batterie
+P	0x0016FF	1	USV auf Bypass
+P	0x001716	0	USV Ein Kommando
+P	0x00172C	1	USV Aus Kommando
+P	0x001743	0	Shutdown schwache Batterie
+P	0x001759	1	Start im Batteriebetrieb
+P	0x001770	0	Batterietest Fehler 
+P	0x00177B	0	(Belastungstest)
+P	0x001787	1	fter Fehler
+P	0x00179D	0	Verkabelungsfehler
+P	0x0017B3	1	Batterien nicht
+P	0x0017BC	0	angeschlossen
+P	0x0017CA	0	Umgebungstemperatur zu
+P	0x0017D6	0	niedrig
+P	0x0017E0	1	Aussentemperatur zu hoch
+P	0x0017F7	0	Madem Fehler
+P	0x00180D	1	Eingenhender Modem Call
+P	0x00181A	0	gestartet
+P	0x001824	0	Ausgenhender Modem Call
+P	0x001830	1	gestartet
+P	0x00183A	1	Modemverbindung
+P	0x001843	0	hergestellt
+P	0x001851	0	Modemverbindung
+P	0x001859	1	abgebrochen
+P	0x001867	1	Autokalibration
+P	0x001870	0	fehlgeschlagen
+P	0x00187E	0	Selektivabschaltung
+P	0x001894	1	Konfigurationsfehler
+P	0x0018AB	0	Redundanz
+P	0x0018B0	0	berlast
+P	0x0018C1	1	Im Hocheffizienzmodus
+P	0x0018D8	0	USV im Normalbetrieb
+P	0x0018EE	1	Zu wenig USVs bereit
+P	0x001905	0	Uhr Einstellung
+P	0x00191B	1	DC Bus unausgeglichen
+P	0x001932	0	Parallel USV Nummernfehler
+P	0x001948	1	Autokalibration aktiv
+P	0x00195F	0	USV ausgeschalten
+P	0x001975	1	Shutdown wg. 
+P	0x00197C	1	bertemp.
+P	0x00198C	0	Shutdown da Ausgang
+P	0x001997	0	berlastet
+P	0x0019A2	1	Beipass Fehler Shutdown
+P	0x001B67	1	 EEPROM
+P	0x001C5E	0	 CAN-
+P	0x001E8E	1	Autocalibration Failed
+P	0x00229B	1	?Inverter AC over
+P	0x0022A5	0	voltage ok
+P	0x0022B4	0	Inverter AC under
+P	0x0022BD	1	voltage ok
+P	0x0022CC	0	Bypass AC over voltage ok
+P	0x0022E4	0	Bypass AC under voltage
+P	0x0022FC	0	Bypass under or over
+P	0x002307	0	frequency ok
+P	0x002314	0	Input AC over voltage ok
+P	0x00232C	0	Input AC under voltage ok
+P	0x002344	0	Input under or over
+P	0x00234E	1	frequency ok
+P	0x00235C	0	Remote Emergency Power
+P	0x002368	0	Off (inact)
+P	0x002374	0	Building alarm 1 ok
+P	0x00238C	0	Output overload ok
+P	0x0023A4	0	Inverter output over
+P	0x0023AF	0	current ok
+P	0x0023BC	0	DC link over voltage ok
+P	0x0023D4	0	DC link under voltage ok
+P	0x0023EC	0	Rectifier  ok
+P	0x002404	0	Inverter ok
+P	0x00241C	0	Charge ok
+P	0x002434	0	Inverter Uncalibrated ok
+P	0x00244C	0	DC voltage Uncalibrated ok
+P	0x002464	0	EEPROM failure (inact)
+P	0x00247C	0	Shutdown imminent over
+P	0x002494	0	Battery ok
+P	0x0024AC	0	Utility failure ok
+P	0x0024C4	0	Output short circuit ok
+P	0x0024DC	0	Utility present
+P	0x0024F4	0	Battery DC over voltage
+P	0x00250C	0	Heatsink overtemperature
+P	0x002524	0	To bypass command (inact)
+P	0x00253C	0	From bypass command
+P	0x002554	0	Bypass not available ok
+P	0x00256C	0	Parallel CAN bus ok
+P	0x002584	0	Loss of redundancy ok
+P	0x00259C	0	Inverter off
+P	0x0025B4	0	On manual/maintenance
+P	0x0025BF	1	bypass (inact)
+P	0x0025CC	0	Battery needs service ok
+P	0x0025E4	0	Level 2 overload ok
+P	0x0025FC	0	Level 3 overload ok
+P	0x002614	0	Level 4 overload ok
+P	0x00262C	0	UPS on battery (inact)
+P	0x002644	0	UPS on bypass (inact)
+P	0x00265C	0	UPS on command (inact)
+P	0x002674	0	UPS off command (inact)
+P	0x00268C	0	Low battery shutdown
+P	0x002697	0	(inact)
+P	0x0026A4	0	DC start occure
+P	0x0026BC	0	Battery test ok
+P	0x0026D4	0	Fan ok
+P	0x0026EC	0	Site wiring ok
+P	0x002704	0	Batteries connected
+P	0x00271C	0	Ambient undertemperature
+P	0x002734	0	Ambient overtemperature
+P	0x00274C	0	Modem ok
+P	0x002764	0	Incomming modem call
+P	0x00276F	0	started (inact.)
+P	0x00277C	0	Outgoing modem call
+P	0x002786	1	started (inact.)
+P	0x002794	0	Modem connection ended
+P	0x0027AC	0	Modem call completion
+P	0x0027B7	1	failed (inact.)
+P	0x0027C4	0	Autocalibration Failed (inact.)
+P	0x0027DC	0	Selective trip (inact.)
+P	0x0027F4	0	Configuration error ok
+P	0x00280C	0	Redundancy overload ok
+P	0x002824	0	In high efficiency
+P	0x00282E	0	mode (inact)
+P	0x00283C	0	UPS on normal (inact)
+P	0x002854	0	Enough units ready ok
+P	0x00286C	0	Clock set done
+P	0x002884	0	DC link imbalance ok
+P	0x00289C	0	Parallel unit number error
+P	0x0028B4	0	Auto Calibration finished
+P	0x0028CC	0	Surtension AC A.S.I ok
+P	0x0028E4	0	Tension AC basse A.S.I ok
+P	0x0028FC	0	Tension AC basse Bypass
+P	0x002914	0	Surtension AC Entr
+P	0x00292C	0	Tension AC basse Entr
+P	0x002944	0	Surtension AC Entr
+P	0x00294F	0	acquite
+P	0x00295C	0	Tension AC basse Entr
+P	0x002968	1	acquite
+P	0x002975	1	quence sur Entr
+P	0x00298E	0	t d'urgence inactif
+P	0x0029A4	0	Alarme local 1 ok
+P	0x0029BC	0	Surcharge en sortie ok
+P	0x0029D4	0	Surcharge courant
+P	0x0029DD	1	onduleur ok
+P	0x0029EC	0	Surtension DC link ok
+P	0x002A04	0	Soustension DC link ok
+P	0x002A1C	0	Redresseur ok
+P	0x002A34	0	Inverseur ok
+P	0x002A4C	0	Charge ok
+P	0x002A64	0	Inverseur non calibr
+P	0x002A7C	0	Tension DC non calibr
+P	0x002A95	0	faut EEPROM (inact.)
+P	0x002AAE	0	t imminent termin
+P	0x002AC4	0	Batterie ok
+P	0x002ADD	0	faut secteur ok
+P	0x002AF4	0	Output short circuit ok
+P	0x002B0C	0	Secteur pr
+P	0x002B24	0	Surtension batterie ok
+P	0x002B3E	1	rature dissipateur
+P	0x002B48	1	thermique ok
+P	0x002B54	0	Commande vers bypass
+P	0x002B6C	0	Commande venant du
+P	0x002B76	0	bypass
+P	0x002B84	0	Bypass non disponible ok
+P	0x002B9C	0	Bus CAN parallele ok
+P	0x002BB4	0	Perte de redondance ok
+P	0x002BCC	0	Inverseur 
+P	0x002BD1	1	teint
+P	0x002BE4	0	Sur bypass de maintenance
+P	0x002BF1	1	(inact.)
+P	0x002BFC	0	Entretien batterie
+P	0x002C06	0	demand
+P	0x002C14	0	Surcharge niveau 2 ok
+P	0x002C2C	0	Surcharge niveau 3 ok
+P	0x002C44	0	Surcharge niveau 4 ok
+P	0x002C5C	0	A.S.I. sur batterie (inact.)
+P	0x002C74	0	A.S.I. sur bypass (inact.)
+P	0x002C8C	0	Commande A.S.I allum
+P	0x002CA4	0	Commande A.S.I 
+P	0x002CAC	0	teinte
+P	0x002CBE	0	t A.S.I. tension batterie
+P	0x002CCB	1	basse (inact.)
+P	0x002CD5	0	marrage DC effectu
+P	0x002CEC	0	Test Batterie = OK
+P	0x002D04	0	Ventilateur ok
+P	0x002D1D	0	faut de c
+P	0x002D22	0	blage
+P	0x002D25	1	phase/neutre ok
+P	0x002D34	0	Batteries connect
+P	0x002D4E	1	rature ambiante
+P	0x002D57	0	basse Ok
+P	0x002D64	0	Surtemperature ambiente ok
+P	0x002D7D	0	faut modem (inact.)
+P	0x002D95	0	but appel entrant Modem
+P	0x002DA1	1	(inact.)
+P	0x002DAD	0	but appel sortant Modem
+P	0x002DB9	1	(inact.)
+P	0x002DC4	0	Fin connexion Modem
+P	0x002DDD	0	faut 
+P	0x002DE0	0	tablissement appel
+P	0x002DEA	0	Modem (inact.)
+P	0x002DF4	1	chec autocalibration (inact.)
+P	0x002E0C	0	Selective trip (inact.)
+P	0x002E24	0	Erreur configuration ok
+P	0x002E3C	0	Surcharge redondance
+P	0x002E47	0	acquite
+P	0x002E54	0	En mode haut rendement
+P	0x002E60	0	(inact.)
+P	0x002E6C	0	A.S.I sur mode normal
+P	0x002E84	0	Modules disponibles
+P	0x002E8E	1	suffisants
+P	0x002E9C	0	Mise 
+P	0x002E9F	0	 l'heure effectu
+P	0x002EB6	0	quilibre DC link ok
+P	0x002ECC	0	Erreur numero de module
+P	0x002ED8	1	parall
+P	0x002EDC	0	le acquite
+P	0x002EE4	0	Auto calibration termin
+P	0x002EFC	0	Tensi
+P	0x002EFF	0	n CA inversor alta
+P	0x002F14	0	Tensi
+P	0x002F17	0	n CA inversor baja
+P	0x002F2C	0	Tensi
+P	0x002F2F	0	n CA desviacion alta
+P	0x002F44	0	Tensi
+P	0x002F47	0	n CA desviacion baja
+P	0x002F5C	0	Frecuencia desviacion alta
+P	0x002F6A	0	o baja ok
+P	0x002F74	0	Tensi
+P	0x002F77	0	n entrada CA alta ok
+P	0x002F8C	0	Tensi
+P	0x002F8F	0	n entrada CA baja
+P	0x002FA4	0	Frecuencia entrada alta
+P	0x002FB0	1	o baja ok
+P	0x002FBC	0	Parada de emergencia
+P	0x002FC7	0	remota(inactiva)
+P	0x002FD4	0	Alarma 1 de edificio ok
+P	0x002FEC	0	Sobrecarga en salida ok
+P	0x003004	0	Sobreintensidad salida
+P	0x003010	0	inversor ok
+P	0x00301C	0	DC link over voltage ok
+P	0x003034	0	DC link under voltage ok
+P	0x00304C	0	Rectifier  ok
+P	0x003064	0	Inverter ok
+P	0x00307C	0	Charge ok
+P	0x003094	0	Inverter Uncalibrated ok
+P	0x0030AC	0	DC voltage Uncalibrated ok
+P	0x0030C4	0	EEPROM failure (inact)
+P	0x0030DC	0	Sobre parada inminente
+P	0x0030F4	0	Bater
+P	0x00310C	0	Fallo de red ok
+P	0x003124	0	Output short circuit ok
+P	0x00313C	0	Red de entrada presente
+P	0x003154	0	Tensi
+P	0x003157	0	n CC bater
+P	0x00315D	0	a alta
+P	0x00316C	0	Heatsink overtemperature
+P	0x003184	0	To bypass command (inact)
+P	0x00319C	0	From bypass command
+P	0x0031B4	0	bypass no disponible ok
+P	0x0031CC	0	CAN bus paralelo ok
+P	0x0031E5	0	rdida de redundancia ok
+P	0x0031FC	0	Inverter off
+P	0x003214	0	Bypass manual (inact)
+P	0x00322C	0	Las bater
+P	0x003231	0	as requieren
+P	0x003238	0	mantenimiento ok
+P	0x003244	0	Level 2 overload ok
+P	0x00325C	0	Level 3 overload ok
+P	0x003274	0	Level 4 overload ok
+P	0x00328C	0	SAI en bater
+P	0x003292	1	a (inactivo)
+P	0x0032A4	0	SAI en Bypass (inactivo)
+P	0x0032BC	0	UPS on command (inact)
+P	0x0032D4	0	UPS off command (inact)
+P	0x0032EC	0	Parada por bater
+P	0x0032F6	0	baja (inactivo)
+P	0x003304	0	DC start occure
+P	0x00331C	0	Test de bater
+P	0x003334	0	Fan ok
+P	0x00334C	0	Fallo de instalaci
+P	0x003357	0	fase y neutro ok
+P	0x003364	0	Bater
+P	0x003367	0	a conectada
+P	0x00337C	0	Temperatura ambiente baja
+P	0x003394	0	Sobretemperatura ambiente
+P	0x0033AD	0	dem ok
+P	0x0033C4	0	Incoming modem call
+P	0x0033CE	1	started (inact.)
+P	0x0033DC	0	Outgoing modem call
+P	0x0033E6	1	started (inact.)
+P	0x0033F4	0	Modem connection ended
+P	0x00340C	0	Modem call completion
+P	0x003417	1	failed (inact)
+P	0x003424	0	Fallo de calibraci
+P	0x00342F	0	automatica(inactivo)
+P	0x00343C	0	Disparo selectivo (inactivo)
+P	0x003454	0	Configuration error ok
+P	0x00346C	0	Sobrecarga en redundancia
+P	0x003484	0	In high efficiency mode
+P	0x003490	1	(inact)
+P	0x00349C	0	UPS on normal (inact)
+P	0x0034B4	0	No hay suficientes m
+P	0x0034BE	1	dulos
+P	0x0034CC	0	Clock set down
+P	0x0034E4	0	DC link imbalance ok
+P	0x0034FC	0	Error en n
+P	0x003501	1	mero de
+P	0x003507	0	dulo paralelo ok
+P	0x003514	0	Auto Calibration finished
+P	0x00352C	0	Wechselrichter 
+P	0x003534	0	berspannung
+P	0x003544	0	Wechselrichter
+P	0x00354C	0	Unterspannung ok
+P	0x00355C	0	Bypass 
+P	0x003560	0	berspannung ok
+P	0x003574	0	Bypass Unterspannung ok
+P	0x00358C	0	Bypass 
+P	0x003590	0	ber-oder
+P	0x003595	0	Unterfrequenz ok
+P	0x0035A4	0	Eing. 
+P	0x0035A7	1	berspannung ok
+P	0x0035BC	0	Eing. Unterspannung ok
+P	0x0035D4	0	Eingang 
+P	0x0035D8	1	ber-oder
+P	0x0035DD	1	Unterfrequenz ok
+P	0x0035EC	0	Externer Notaus (inakt.)
+P	0x003606	0	udealarm 1 ok
+P	0x00361C	0	Ausgang 
+P	0x003620	1	berlast ok
+P	0x003634	0	Wechselr. Ausgang
+P	0x00363E	0	berstrom ok
+P	0x00364C	0	DC Link 
+P	0x003650	1	berspannung ok
+P	0x003664	0	DC Link Unterspannung ok
+P	0x00367C	0	Gleichrichter ok
+P	0x003694	0	Wechselrichter Fehler ok
+P	0x0036AC	0	Ladeger
+P	0x0036C4	0	Wechselrichter unkalibriert
+P	0x0036DC	0	DC Bus unkalibriert ok
+P	0x0036F4	0	EEPROM Fehler inaktiv
+P	0x00370C	0	USV Abschaltvorgang
+P	0x003716	1	beeendet
+P	0x003724	0	Batterie ok
+P	0x00373C	0	Netz Eing. Fehler ok
+P	0x003754	0	Kurzschl.am Ausgang
+P	0x00376C	0	Netz am Eing.OK
+P	0x003784	0	Batterie 
+P	0x003789	0	berspg. ok
+P	0x00379F	0	rper 
+P	0x0037A2	0	bertemperatur
+P	0x0037B4	0	Kommando auf Bypass 
+P	0x0037CC	0	Kommando auf
+P	0x0037D3	0	Normalbetrieb
+P	0x0037E4	0	Bypass nicht verf
+P	0x0037ED	0	gbar ok
+P	0x0037FC	0	Parallel CAN bus OK
+P	0x003814	0	Redundanzverlust OK
+P	0x00382C	0	Wechselrichter aus
+P	0x003844	0	Auf manuellem Bypass
+P	0x00384F	0	(inaktiv)
+P	0x00385C	0	Batterie Service n
+P	0x003865	1	tig OK
+P	0x003874	1	berlast Level 2 ok
+P	0x00388C	1	berlast Level 3 ok
+P	0x0038A4	1	berlast Level 4 ok
+P	0x0038BC	0	USV auf Batterie (inakt.)
+P	0x0038D4	0	USV auf Bypass (inakt.)
+P	0x0038EC	0	USV Ein Kommando 
+P	0x003904	0	USV Aus Kommando 
+P	0x00391C	0	Shutdown schwache
+P	0x003925	1	Batterie (inakt.)
+P	0x003934	0	Start im Batteriebetrieb
+P	0x00394C	0	Batterietest OK
+P	0x003965	0	fter ok
+P	0x00397C	0	Verkabelung OK
+P	0x003994	0	Batterien angeschlossen
+P	0x0039AC	0	Umgebungstemperatur ok
+P	0x0039C4	0	Aussentemperatur zu hoch
+P	0x0039DC	0	Modem ok
+P	0x0039F4	0	Eingenhender Modem Call
+P	0x003A00	1	gestartet (inakt.)
+P	0x003A0C	0	Ausgenhender Modem Call
+P	0x003A18	1	gestartet (inakt.)
+P	0x003A24	0	Modemverbindung beendet
+P	0x003A3C	0	Modemverbindung
+P	0x003A44	1	abgebrochen(inakt.)
+P	0x003A54	0	Autokalibration
+P	0x003A5C	1	fehlgeschlagen(inakt.)
+P	0x003A6C	0	Selektivabschaltung (inaktiv)
+P	0x003A84	0	Konfigurationsfehler ok
+P	0x003A9C	0	Redundanz
+P	0x003AA1	0	berlast OK
+P	0x003AB4	0	Im Hocheffizienzmodus
+P	0x003ABF	1	(inakt.)
+P	0x003ACC	0	USV im Normalbetrieb
+P	0x003AE4	0	Zu wenig USVs bereit OK
+P	0x003AFC	0	Uhr wurde eingestellt
+P	0x003B14	0	DC Bus unausgeglichen
+P	0x003B1F	1	(inakt.)
+P	0x003B2C	0	Parallel USV
+P	0x003B33	0	Nummernfehler OK
+P	0x003B44	0	Autokalibrierung beendet
+P	0x003C3B	0	 1 OK
+P	0x003D27	0	 EEPROM (
+P	0x004084	0	Autocalibration Failed (inact)
+P	0x004420	0	UPS STATUS
+P	0x00442A	1	EVENT LOG
+P	0x004435	0	MEASUREMENTS
+P	0x00443F	1	CONTROL
+P	0x00444A	0	IDENTIFICATION
+P	0x004454	1	SETTINGS
+P	0x00445F	0	ETAT A.S.I.
+P	0x004469	1	RAPPORT D'EVENEMENTS
+P	0x004474	0	MESURES
+P	0x00447E	1	CONTR
+P	0x004489	0	IDENTIFICATION
+P	0x004493	1	REGLAGE
+P	0x00449E	0	ESTADO DE SAI
+P	0x0044A8	1	HISTORICO DE EVENTOS
+P	0x0044B3	0	MEDIDAS DE
+P	0x0044BD	1	CONTROL
+P	0x0044C8	0	IDENTIFICACION
+P	0x0044D2	1	AJUSTES
+P	0x0044DD	0	USV STATUS
+P	0x0044E7	1	EREIGNISAUFZEICHNUNG
+P	0x0044F2	0	MESSWERTE
+P	0x0044FC	1	KONTROLLE
+P	0x004507	0	IDENTIFIKATION
+P	0x004511	1	EINSTELLUNGEN
+P	0x004597	0	UPS initializing...
+P	0x0045A5	0	UPS starting...
+P	0x0045B3	0	UPS on standby
+P	0x0045C1	0	UPS on line
+P	0x0045CF	0	UPS on battery
+P	0x0045DD	0	UPS on bypass
+P	0x0045EB	0	UPS in High Efficiency Mode
+P	0x0045F9	0	UPS off
+P	0x004607	0	Startup pending
+P	0x004615	0	UPS off pending
+P	0x004623	0	Load: 
+P	0x004631	0	Runtime: 
+P	0x00463F	0	UPS in High Alert Mode
+P	0x00464D	0	Initialisation de l'A.S.I
+P	0x00465C	1	Demarrage L'A.S.I...
+P	0x00466C	0	A.S.I en attente
+P	0x00467B	1	A.S.I en ligne
+P	0x00468B	0	A.S.I. sur batterie
+P	0x00469A	1	A.S.I. sur Bypass
+P	0x0046AA	0	A.S.I. en mode haut
+P	0x0046B4	1	rendement
+P	0x0046B9	1	L'A.S.I. est 
+P	0x0046C0	1	teinte
+P	0x0046C9	0	Mise en route en cours
+P	0x0046DA	1	t A.S.I en cours
+P	0x0046E8	0	Puissance: 
+P	0x0046F7	1	Autonomie: 
+P	0x004707	0	Mode haute alerte
+P	0x004716	1	SAI inicializando
+P	0x004725	1	SAI arrancando...
+P	0x004734	1	SAI en espera
+P	0x004743	1	SAI correcto
+P	0x004752	1	SAI en bater
+P	0x004761	1	SAI en BY-PASS
+P	0x004770	1	SAI en modo alto
+P	0x004779	1	rendimiento
+P	0x00477F	1	SAI parado
+P	0x00478E	1	Encendido pendiente
+P	0x00479D	1	Parada pendiente
+P	0x0047AC	1	Carga: 
+P	0x0047BB	1	Autonom
+P	0x0047CA	1	SAI en modo de alarma alta
+P	0x0047D9	1	USV Initialisierung
+P	0x0047E8	1	USV startet...
+P	0x0047F7	1	USV in Bereitschaft
+P	0x004806	1	USV Online
+P	0x004815	1	USV in Batteriebetrieb
+P	0x004824	1	USV auf Bypass
+P	0x004833	1	USV im High Efficiency
+P	0x00483F	1	Modus
+P	0x004842	1	USV aus
+P	0x004851	1	Hochfahren folgt
+P	0x004860	1	USV vor Abschaltung
+P	0x00486F	1	Last: 
+P	0x00487E	1	Laufzeit: 
+P	0x00488D	1	USV Alarm
+P	0x0048D2	1	 online
+P	0x004A02	0	Battery charging
+P	0x004A0C	1	Charge level: 
+P	0x004A17	0	Battery floating
+P	0x004A21	1	Charge level: 
+P	0x004A2C	0	Battery resting
+P	0x004A36	1	Charge level: 100%
+P	0x004A41	0	Battery discharging
+P	0x004A4B	1	Charge level:
+P	0x004A56	0	Battery disconnected
+P	0x004A60	1	Charge level: ...%
+P	0x004A6B	0	Batterie en charge
+P	0x004A75	1	Utilisation 
+P	0x004A80	0	Batterie en floating
+P	0x004A8A	1	Utilisation 
+P	0x004A95	0	Batterie au repos
+P	0x004A9F	1	Utilisation 
+P	0x004AA6	0	 100%
+P	0x004AAA	0	Batterie en d
+P	0x004AB1	0	charge
+P	0x004AB4	1	Utilisation 
+P	0x004ABF	0	Batterie d
+P	0x004AC4	1	connect
+P	0x004AC9	1	Utilisation 
+P	0x004AD0	0	 ...%
+P	0x004AD4	0	Bater
+P	0x004AD7	0	a en carga
+P	0x004AE1	1	Nivel carga Bater
+P	0x004AEF	0	Bater
+P	0x004AF2	0	a en flotaci
+P	0x004AFC	1	Nivel carga Bater
+P	0x004B0A	0	Bater
+P	0x004B0D	0	a en espera
+P	0x004B17	1	Nivel carga Bater
+P	0x004B20	1	as: 100%
+P	0x004B25	0	Bater
+P	0x004B28	0	a en descarga
+P	0x004B32	1	Nivel carga Bater
+P	0x004B40	0	Bater
+P	0x004B43	0	a no conectada
+P	0x004B4D	1	Nivel carga Bater
+P	0x004B56	1	as: ...%
+P	0x004B5B	0	Batterieladung
+P	0x004B69	1	Batterien      geladen 
+P	0x004B78	0	Batterie flie
+P	0x004B86	1	Batterien      geladen 
+P	0x004B95	0	Batterie ruhend
+P	0x004BA3	1	Batterien 100% geladen 
+P	0x004BB2	0	Batterieentladung
+P	0x004BC0	1	Batterien      geladen 
+P	0x004BCF	0	Batterie nicht angeschlossen
+P	0x004BDD	1	Batterien ...% geladen
+P	0x004C1F	0	: 100%
+P	0x004C4B	0	: ...%
+P	0x004CC3	0	No events in log
+P	0x004CCB	1	Aucun 
+P	0x004CD0	0	nement
+P	0x004CD4	0	enregistr
+P	0x004CDC	1	n evento en el
+P	0x004CE4	1	registro
+P	0x004CE9	0	Keine Ereignisse im Log
+P	0x004D09	0	Input Line Events
+P	0x004D12	1	Even. d'entr
+P	0x004D1C	0	Eventos de entrada
+P	0x004D25	1	Eingangsst
+P	0x004D2B	0	rungen
+P	0x004D40	1	Output
+P	0x004D44	1	Input
+P	0x004D48	1	Bypass
+P	0x004D4C	1	Battery
+P	0x004D50	1	Utilisation
+P	0x004D56	1	Utilisation
+P	0x004D5C	1	Sortie
+P	0x004D68	1	Bypass
+P	0x004D6E	1	Batterie
+P	0x004D74	1	Carga
+P	0x004D78	1	Carga
+P	0x004D7C	1	Salida
+P	0x004D80	1	Entrada
+P	0x004D84	1	Bypass
+P	0x004D88	1	Bater
+P	0x004D95	1	Ausgang
+P	0x004D9A	0	Eingang
+P	0x004D9E	1	Bypass
+P	0x004DA3	0	Batterie
+P	0x004E17	0	GO TO BYPASS
+P	0x004E23	0	GO TO NORMAL
+P	0x004E2F	0	RESET ERROR STATE
+P	0x004E3B	0	Press 
+P	0x004E47	0	Load Segment 1: 
+P	0x004E53	0	Load Segment 2: 
+P	0x004E5F	0	RESTORE FACTORY
+P	0x004E6B	0	SETTINGS
+P	0x004E77	0	LOAD SEGMENTS
+P	0x004E83	0	START BATTERY TEST
+P	0x004E8F	0	Battery test running
+P	0x004E9B	0	Battery test OK
+P	0x004EA7	0	Test interrupted
+P	0x004EB3	0	Completed: 15%
+P	0x004EBF	0	Battery test failed
+P	0x004ECB	0	Battery test can not be
+P	0x004ED7	0	run now.Try again later.
+P	0x004EEF	0	PASSER EN MODE BYPASS
+P	0x004EFB	1	PASSER EN MODE NORMAL
+P	0x004F08	0	EFFACER ETAT D'ALARME
+P	0x004F14	1	Appuyer sur 
+P	0x004F21	0	Segment de charge 1: 
+P	0x004F2D	1	Segment de charge 2: 
+P	0x004F3A	0	Restaurer les param
+P	0x004F46	1	d'usine
+P	0x004F53	0	SEGMENTS DE CHARGE
+P	0x004F5F	1	COMMENCER TEST BATTERIE
+P	0x004F6C	0	Test Batterie en cours
+P	0x004F78	1	Test Batterie = OK
+P	0x004F85	0	Test interrompu
+P	0x004F95	0	: 15%
+P	0x004F9E	0	Test Batterie = D
+P	0x004FAA	1	Test batterie impossible
+P	0x004FB7	0	maintenant.R
+P	0x004FBD	1	essayer
+P	0x004FC3	1	plus tard
+P	0x004FD0	0	IR A BYPASS
+P	0x004FDD	1	IR A NORMAL
+P	0x004FEB	0	ERROR RESET
+P	0x004FF8	1	Presionar 
+P	0x005006	0	Segmento de carga 1: 
+P	0x005013	1	Segmento de carga 2: 
+P	0x005021	0	Reestablecer los ajustes
+P	0x005031	0	brica
+P	0x00503C	0	SEGMENTOS DE CARGA
+P	0x005049	1	INICIAR TEST DE BATERIA
+P	0x005057	0	Test de bater
+P	0x00505E	0	a en curso
+P	0x005064	1	Test de bater
+P	0x005072	0	Test interrumpido
+P	0x00507F	1	Completado:  15%
+P	0x00508D	0	Fallo en test de bater
+P	0x00509A	1	No puede empezar ahora
+P	0x0050A8	0	test de bater
+P	0x0050B5	1	Intentar m
+P	0x0050BB	0	s tarde
+P	0x0050C3	0	AUF BYPASSBETRIEB SCHALTEN
+P	0x0050D0	1	AUF NORMALBETRIEB SCHALTEN
+P	0x0050DE	0	FEHLER STATUS L
+P	0x0050E6	0	SCHEN
+P	0x0050F9	0	Lastsegment 1: 
+P	0x005106	1	Lastsegment 2: 
+P	0x005114	0	Auf Werkseinstellung 
+P	0x005123	1	cksetzen
+P	0x00512F	0	LASTSEGMENTE
+P	0x00513C	1	START BATTERIETEST
+P	0x00514A	0	Batterietest laeuft
+P	0x005157	1	Batterietest OK
+P	0x005165	0	Test unterbrochen
+P	0x005172	1	Ausgef
+P	0x005176	0	hrt: 15%
+P	0x005180	0	Batterietest Fehler
+P	0x00518D	1	Batterietest kann nicht
+P	0x00519B	0	durchgefuehrt werden.
+P	0x0051A8	1	Versuchen Sie es spaeter.
+P	0x00529E	0	: 15%
+P	0x0053B9	0	Type:
+P	0x0053C0	1	PW9130
+P	0x0053C8	0	Part number:
+P	0x0053CF	1	Serial number:
+P	0x0053D7	0	Firmware:
+P	0x0053DE	1	Type:
+P	0x0053E7	0	PW9130
+P	0x0053FA	0	ro de s
+P	0x005400	1	Logiciel:
+P	0x005409	0	Tipo:
+P	0x005411	1	PW9130
+P	0x00541A	0	Modelo:
+P	0x005423	1	mero de serie:
+P	0x00542B	0	Firmware:
+P	0x005433	1	Type:
+P	0x005438	1	PW9130
+P	0x00543D	1	Teil:
+P	0x005442	1	Serie:
+P	0x005447	1	Firmware:
+P	0x005454	1	PW9130
+P	0x0054A7	0	< enabled >
+P	0x0054B0	0	< disabled >
+P	0x0054B9	0	< Activ
+P	0x0054C4	0	sactiv
+P	0x0054CB	0	< Habilitado >
+P	0x0054D4	0	< Deshabilitado >
+P	0x0054DD	0	< aktiviert >
+P	0x0054E6	0	< deaktiviert >
+P	0x005501	0	USER SETTINGS
+P	0x00550D	1	SERVICE SETTINGS
+P	0x00551A	0	REGLAGES UTILISATEUR
+P	0x005526	1	REGLAGES SERVICE
+P	0x005533	0	AJUSTES DE USUARIO
+P	0x00553F	1	AJUSTES DE SERVICIO
+P	0x00554C	0	ANWENDER- PROGRAMMIERUNG
+P	0x005558	1	SERVICE- PROGRAMMIERUNG
+P	0x005592	0	Password:
+P	0x00559B	0	Mot de passe:
+P	0x0055A4	0	Contrase
+P	0x0055AD	0	Passwort:
+P	0x0055C9	0	Change language
+P	0x0055D4	0	< English >
+P	0x0055DF	0	< Fran
+P	0x0055E2	1	ais >
+P	0x0055EA	0	< Espa
+P	0x0055F5	0	< Deutsch >
+P	0x00560B	0	Changement de langues
+P	0x005616	0	< Anglais >
+P	0x005621	0	< Fran
+P	0x005624	1	ais >
+P	0x00562C	0	< Espagnol >
+P	0x005637	0	< Allemand >
+P	0x00564D	0	Cambio de Idioma
+P	0x005658	0	< Ingl
+P	0x005663	0	< Franc
+P	0x00566E	0	< Espa
+P	0x005679	0	< Alem
+P	0x005684	0	< Ruso >
+P	0x00568F	0	Sprache wechseln
+P	0x00569A	0	< English >
+P	0x0056A5	0	< Fran
+P	0x0056A8	1	ais >
+P	0x0056B0	0	< Espa
+P	0x0056BB	0	< Deutsch >
+P	0x0056DC	0	< English >
+P	0x0056E7	0	< Fran
+P	0x0056EA	1	ais >
+P	0x0056F2	0	< Espa
+P	0x0056FD	0	< Deutsch >
+P	0x00574F	0	User password
+P	0x005756	0	Mot de passe
+P	0x00575C	1	Contrase
+P	0x005761	0	a de Usuario
+P	0x005767	1	User Passwort
+P	0x005798	0	Audible alarms
+P	0x0057A3	1	Alarmes sonores
+P	0x0057AF	0	Alarmas ac
+P	0x0057B4	1	sticas
+P	0x0057BA	1	Akkustischer Alarm
+P	0x0057F0	0	SET DATE AND TIME
+P	0x0057FE	0	DATE ET HEURE
+P	0x00580C	0	Fiajar fecha y hora
+P	0x00581A	0	Datum und Zeiteinstellung
+P	0x005836	0	Date:
+P	0x00583C	0	Time:
+P	0x005842	0	Set year
+P	0x005848	0	Set month
+P	0x00584E	0	Set day  
+P	0x005854	0	Set hours
+P	0x00585A	0	Set minutes
+P	0x005860	0	Date:
+P	0x005864	0	Heure:
+P	0x005874	0	heures
+P	0x005878	0	minutes
+P	0x00587C	0	Fecha:
+P	0x005883	0	Hora:
+P	0x00588A	0	Fijar a
+P	0x005891	0	Fijar mes
+P	0x005898	0	Fijar d
+P	0x00589F	0	Fijar hora
+P	0x0058A6	0	Fijar minutos
+P	0x0058AD	0	Datum:
+P	0x0058B1	0	Zeit:
+P	0x0058B9	0	Monat
+P	0x0058C1	0	Stunden
+P	0x0058C5	0	Minuten
+P	0x005958	0	not used
+P	0x005966	0	force bypass
+P	0x005974	0	remote shutdown
+P	0x005982	0	delayed shutdown
+P	0x005990	0	on generator
+P	0x00599E	0	building alarm 1
+P	0x0059BA	0	Active:
+P	0x0059C8	0	Inutilis
+P	0x0059D6	0	Bypass forc
+P	0x0059E7	1	 distance
+P	0x0059F4	0	t retard
+P	0x005A00	0	sur g
+P	0x005A04	0	rateur
+P	0x005A0E	0	Alarme perso. 1
+P	0x005A2A	0	Active:
+P	0x005A38	0	no se usa
+P	0x005A46	0	Bypass forzado
+P	0x005A54	0	Cierre remoto
+P	0x005A62	0	Cierre retrasado
+P	0x005A70	0	Sobre grupo elec.
+P	0x005A7E	0	Alarma 1
+P	0x005A9A	0	Activo:
+P	0x005AA8	0	nicht verwendet
+P	0x005AB6	0	auf BP zwingen
+P	0x005AC4	0	Fernabschaltung
+P	0x005AD2	0	verz. Abschalt.
+P	0x005AE0	0	Generatorbetr.
+P	0x005AF0	0	udealarm 1
+P	0x005B0A	0	Aktivierung bei:
+P	0x005B88	0	RS232-3
+P	0x005B91	1	cXSlot serial
+P	0x005B9B	0	cXSlot signal
+P	0x005BB7	1	SIGNAL INPUTS
+P	0x005BC1	0	Input:
+P	0x005BCA	1	Setup:
+P	0x005BDD	1	RS232-3
+P	0x005BE8	0	rie cXSlot
+P	0x005BF0	1	signal cXSlot
+P	0x005C0D	0	ENTREES SIGNAUX
+P	0x005C20	0	Setup:
+P	0x005C33	0	RS232-3
+P	0x005C3C	1	cXSlot serie
+P	0x005C46	0	cXSlot se
+P	0x005C64	0	ales de entrada
+P	0x005C6C	0	Entrada:
+P	0x005C75	1	Ajustes:
+P	0x005C88	1	RS232-3
+P	0x005C92	0	cXSlot seriell
+P	0x005C9B	1	cXSlot Kontakte
+P	0x005CB8	0	Signal Eing
+P	0x005CC1	1	Eingang:
+P	0x005CCB	0	Einstellung:
+P	0x005CDE	0	RS232-3
+P	0x005CE7	1	cXSlot serial
+P	0x005CF1	0	cXSlot signal
+P	0x005DCA	0	on battery
+P	0x005DD2	0	battery low
+P	0x005DDA	0	UPS ok
+P	0x005DE2	0	on bypass
+P	0x005DEA	0	ext. charger on
+P	0x005DF2	0	Relay:
+P	0x005DFA	0	Setup:
+P	0x005E02	0	sur batterie
+P	0x005E0A	1	batterie faible
+P	0x005E13	0	A.S.I ok
+P	0x005E1B	1	sur bypass
+P	0x005E24	0	Chargeur ext. On
+P	0x005E2C	1	Relais:
+P	0x005E35	0	Setup:
+P	0x005E3D	1	Bater
+P	0x005E46	0	Bater
+P	0x005E49	0	a baja
+P	0x005E4E	1	UPS   OK
+P	0x005E57	0	bypass ON
+P	0x005E5F	1	Cargador Ext. ON
+P	0x005E70	1	Ajustes:
+P	0x005E79	0	Batteriebetrieb
+P	0x005E82	1	V Batt. niedrig
+P	0x005E8C	0	USV ok
+P	0x005E95	1	Im Beipass
+P	0x005E9F	0	Ext. Ladeg. Ein
+P	0x005EA8	1	Relais:
+P	0x005EB2	0	Einstellung:
+P	0x005EF7	0	RS232-8/cXSlot-K1
+P	0x005F01	1	RS232-1/cXSlot-K2
+P	0x005F0C	0	standard/cXSlot-K3
+P	0x005F16	1	cXSlot-K4
+P	0x005F21	0	RELAY CONFIGURATION
+P	0x005F2B	1	RS232-8/cXSlot-K1
+P	0x005F36	0	RS232-1/cXSlot-K2
+P	0x005F40	1	standard/cXSlot-K3
+P	0x005F4B	0	cXSlot-K4
+P	0x005F55	1	CONFIGURATION RELAIS
+P	0x005F60	0	RS232-8/cXSlot-K1
+P	0x005F6A	1	RS232-1/cXSlot-K2
+P	0x005F77	0	ndar/cXSlot-K3
+P	0x005F7F	1	cXSlot-K4
+P	0x005F8A	0	Configuraci
+P	0x005F90	0	n Rel
+P	0x005F94	1	RS232-8/cXSlot-K1
+P	0x005F9F	0	RS232-1/cXSlot-K2
+P	0x005FA9	1	standard/cXSlot-K3
+P	0x005FB4	0	cXSlot-K4
+P	0x005FBE	1	Relais Einstellungen
+P	0x005FC9	0	RS232-8/cXSlot-K1
+P	0x005FD3	1	RS232-1/cXSlot-K2
+P	0x005FDE	0	standard/cXSlot-K3
+P	0x005FE8	1	cXSlot-K4
+P	0x00607D	1	Port:
+P	0x006082	1	Speed:
+P	0x006087	1	RS232
+P	0x00608C	1	cXSlot
+P	0x006091	1	Commands:
+P	0x006096	1	Port:
+P	0x00609B	1	Vitesse:
+P	0x0060A0	1	RS232
+P	0x0060A5	1	cXSlot
+P	0x0060AA	1	Commandes:Puerto:
+P	0x0060B5	0	Velocidad:
+P	0x0060BA	1	RS232
+P	0x0060C0	0	cXSlot
+P	0x0060C5	1	Comandos:
+P	0x0060CB	0	Port.
+P	0x0060D3	1	Geschwindigkeit:
+P	0x0060DC	0	RS232
+P	0x0060E4	1	cXSlot
+P	0x0060ED	0	1200 Baut
+P	0x0060F5	1	2400 Baut
+P	0x0060FE	0	9600 Baut
+P	0x006106	1	Kommandos:
+P	0x006119	0	RS232
+P	0x00611E	0	cXSlot
+P	0x006128	0	SERIAL PORT CONFIGURATION
+P	0x006135	0	CONFIGURATION PORT SERIE
+P	0x006141	1	CONFIGURACION PUERTO SERIE
+P	0x00614F	0	Konfiguration serielle
+P	0x00615B	0	Schnittstelle
+P	0x0061BE	0	CONTROL COMMANDS
+P	0x0061C8	0	FROM SERIAL PORT
+P	0x0061D2	0	COMMANDES VENANT
+P	0x0061DC	0	DU PORT SERIE
+P	0x0061E6	0	CONTROL COMANDOS
+P	0x0061F0	0	DEL PUERTO SERIE
+P	0x0061FA	0	Steuerkommandos
+P	0x006204	0	vom seriellen Port
+P	0x006272	0	< 200V >
+P	0x006276	1	< 208V >
+P	0x00627B	0	< 220V >
+P	0x00627F	1	< 230V >
+P	0x006284	0	< 240V >
+P	0x006288	1	< 100V >
+P	0x00628D	0	< 110V >
+P	0x006291	1	< 120V >
+P	0x006296	0	< 127V >
+P	0x00629A	1	< 200
+P	0x00629F	0	< 208
+P	0x0062A3	1	< 220
+P	0x0062A8	0	< 230
+P	0x0062AC	1	< 240
+P	0x0062B1	0	< 100
+P	0x0062B5	1	< 110
+P	0x0062BA	0	< 120
+P	0x0062BE	1	< 127
+P	0x0062C3	0	Output voltage
+P	0x0062CD	1	< autosensing >
+P	0x0062D8	0	Tension de sortie
+P	0x0062E2	1	< autod
+P	0x0062E6	1	tection >
+P	0x0062ED	0	Tensi
+P	0x0062F0	0	n de salida
+P	0x0062F7	1	< autodetecci
+P	0x006302	0	Ausgangsspannung
+P	0x00630C	1	< autom. Erkennung >
+P	0x00632C	0	Output voltage
+P	0x006336	1	< autosensing >
+P	0x006341	0	Tension de sortie
+P	0x00634B	1	< autod
+P	0x00634F	1	tection >
+P	0x006356	0	Tensi
+P	0x006359	0	n de salida
+P	0x006360	1	< autodetecci
+P	0x00636B	0	Ausgangsspannung
+P	0x006375	1	< autom. Erkennung >
+P	0x006417	0	< 50Hz >
+P	0x00641B	1	< 60Hz >
+P	0x006429	0	Output frequency
+P	0x006433	1	< autosensing >
+P	0x00643F	1	quence de sortie
+P	0x006448	1	< autod
+P	0x00644C	1	tection >
+P	0x006453	0	Frecuencia de salida
+P	0x00645D	1	< autodetecci
+P	0x006468	0	Ausgangsfrequenz
+P	0x006472	1	< autom. Erkennung >
+P	0x0064BA	0	Frequency converter
+P	0x0064C7	1	Convertisseur de fr
+P	0x0064D1	1	quence
+P	0x0064D5	0	Convertidor de frecuencia
+P	0x0064E2	1	Frequenzkonverter
+P	0x00651C	0	Overload alarm level
+P	0x00652C	0	Niveau alarme surcharge
+P	0x00653C	0	Alarma nivel de sobrecarga
+P	0x00654C	1	berlast Alarm Level
+P	0x006576	0	Transfer to bypass
+P	0x006582	1	when overload
+P	0x00658F	0	< immediate >
+P	0x00659B	1	< after delay >
+P	0x0065A8	0	Transfert sur bypass
+P	0x0065B4	1	si surcharge
+P	0x0065C1	0	< imm
+P	0x0065C4	0	diat >
+P	0x0065CD	1	< apr
+P	0x0065D2	1	lai >
+P	0x0065DA	0	Paso a bypass con
+P	0x0065E6	1	sobrecarga
+P	0x0065F3	0	< inmediato >
+P	0x0065FF	1	< despues de un tiempo >
+P	0x00660C	0	Auf Beipass schalten
+P	0x006618	1	wenn 
+P	0x00661B	1	berlast
+P	0x006625	0	< sofort >
+P	0x006631	1	< mit Verz
+P	0x006637	0	gerung >
+P	0x006698	0	Power strategy
+P	0x0066A2	0	< normal >
+P	0x0066AC	0	< high efficiency >
+P	0x0066B6	0	Strat
+P	0x0066C2	0	< mode normal >
+P	0x0066CE	0	< mode haut rendement >
+P	0x0066DA	0	Configuraci
+P	0x0066E0	0	n de la
+P	0x0066E4	1	potencia
+P	0x0066E9	1	< normal >
+P	0x0066F9	0	< alto rendimiento >
+P	0x006708	1	Betriebsart
+P	0x006714	0	< normal >
+P	0x00671F	1	< Hocheffizienzmodus >
+P	0x00676A	0	Outlets:
+P	0x006775	0	Delay:
+P	0x006780	0	< no delay >
+P	0x00678B	0	segment 1
+P	0x006796	0	segment 2
+P	0x0067A1	0	Outlets:
+P	0x0067AC	0	Delay:
+P	0x0067B7	0	< imm
+P	0x0067BA	0	diat >
+P	0x0067C2	0	Segment 1
+P	0x0067CD	0	Segment 2
+P	0x0067D8	0	Outlets:
+P	0x0067E3	0	Delay:
+P	0x0067EE	0	< no retrasado >
+P	0x0067F9	0	segment 1
+P	0x006804	0	segment 2
+P	0x00680F	0	Outlets:
+P	0x00681A	0	Delay:
+P	0x006825	0	<keine Verz
+P	0x00682B	0	gerung>
+P	0x006830	0	segment 1
+P	0x00683B	0	segment 2
+P	0x006846	0	Outlets:
+P	0x006851	0	Delay:
+P	0x006867	0	segment 1
+P	0x006872	0	segment 2
+P	0x00687D	0	Automatic start delay
+P	0x006889	1	lai d
+P	0x00688C	1	marrage
+P	0x006891	0	automatique
+P	0x006897	0	Retraso del Arranque
+P	0x0068A2	0	Automatico
+P	0x0068AA	1	gerung Auto Start
+P	0x006905	0	Automatic on battery
+P	0x006910	0	shutdown
+P	0x00691D	0	t sur batterie
+P	0x006926	0	automatique
+P	0x006931	0	Cierre autom
+P	0x006937	1	tico 
+P	0x00693C	0	sobre baterias
+P	0x006947	0	Autom. Shutdown
+P	0x006952	0	im Batteriebetrieb
+P	0x0069C3	0	Start on battery
+P	0x0069D0	1	marrage sur batterie
+P	0x0069DC	0	Arranque sobre bater
+P	0x0069E8	1	Start im Batteriebetrieb
+P	0x006A20	0	Energy saving mode
+P	0x006A2C	1	Mode 
+P	0x006A2F	1	conomie d'
+P	0x006A35	0	nergie
+P	0x006A39	0	Modo Ahorro de Energ
+P	0x006A45	1	Energiesparmodus
+P	0x006A73	0	< no delay >
+P	0x006A7E	0	< imm
+P	0x006A81	0	diat >
+P	0x006A89	0	< no retrasado >
+P	0x006A94	0	< keine Verz
+P	0x006A9A	1	gerung >
+P	0x006AAA	0	Remote shutdown delay
+P	0x006ABD	0	lai arr
+P	0x006AC2	1	 distance
+P	0x006ACE	0	Retraso del cierre remoto
+P	0x006AE2	1	gerung
+P	0x006AE6	1	Fernabschaltung
+P	0x006B18	0	Delayed shutdown delay
+P	0x006B2D	1	lai arr
+P	0x006B31	1	t retard
+P	0x006B41	0	Retraso del cierre
+P	0x006B4B	0	retrasado
+P	0x006B58	0	gerung bei
+P	0x006B60	1	gerter Abschaltung
+P	0x006B93	0	On battery notice delay
+P	0x006BA8	1	lai avertissement
+P	0x006BB2	0	sur batterie
+P	0x006BBC	0	Retraso aviso sobre
+P	0x006BC6	1	bater
+P	0x006BD3	0	gerung Warnmeldung
+P	0x006BDD	0	Batteriebetrieb
+P	0x006C04	0	Site wiring fault alarm
+P	0x006C13	1	Alarme d
+P	0x006C18	0	faut c
+P	0x006C1B	1	blage
+P	0x006C23	0	Alarma desconexi
+P	0x006C2B	1	n cables
+P	0x006C32	1	Alarm Verkabelungsfehler
+P	0x006C70	0	Bypass voltage low limit
+P	0x006C85	0	Limite basse tension bypass
+P	0x006C9A	0	Tensi
+P	0x006C9D	0	n en Bypass por
+P	0x006CA5	1	debajo del limite
+P	0x006CAF	0	unterer Schwellenwert
+P	0x006CBA	1	Beipassspannung
+P	0x006CE3	0	Bypass voltage high limit
+P	0x006CF7	1	Limite haute tension bypass
+P	0x006D0C	0	Tensi
+P	0x006D0F	0	n en Bypass sobre
+P	0x006D18	1	limites
+P	0x006D20	1	oberer Schwellenwert
+P	0x006D2B	1	Beipassspannung
+P	0x006D54	0	Qualify bypass
+P	0x006D60	0	< when in spec >
+P	0x006D6C	0	< never >
+P	0x006D78	0	< always on UPS fault >
+P	0x006D84	0	< always >
+P	0x006D90	0	Transfer sur bypass
+P	0x006D9D	1	< si r
+P	0x006DA1	0	seau en tol
+P	0x006DA7	0	rance >
+P	0x006DAB	0	< jamais >
+P	0x006DB8	1	< Sur d
+P	0x006DBC	1	faut A.S.I >
+P	0x006DC6	0	< toujours >
+P	0x006DD3	1	Configurar Bypass
+P	0x006DE1	0	< cuando>
+P	0x006DEE	1	< nunca >
+P	0x006DFC	0	<siempre con SAI defecto>
+P	0x006E09	1	< siempre >
+P	0x006E17	0	Qualifiziere Bypass
+P	0x006E24	0	<innerh. Spezifikationen>
+P	0x006E31	0	< niemals >
+P	0x006E3E	0	< immer bei USV Fehler >
+P	0x006E4B	0	< immer >
+P	0x006ECB	0	Synchronization window
+P	0x006ED6	1	< sync disabled >
+P	0x006EE4	0	tre de synchro.
+P	0x006EEC	1	< sync d
+P	0x006EF1	0	sactiv
+P	0x006EF7	0	Ventana de sincronizaci
+P	0x006F04	0	< sincro. deshabilitada >
+P	0x006F11	0	Synchronisationsfenster
+P	0x006F1E	1	< Synchronisation deakt. >
+P	0x006F55	0	Unsynchronized transfers
+P	0x006F64	1	Transferts non synchronis
+P	0x006F74	0	Transferencia desincronizada
+P	0x006F83	1	Unsynchronisierte Transfers
+P	0x006FC1	0	Number of battery strings
+P	0x006FD7	0	Nombre de cha
+P	0x006FE0	1	batteries
+P	0x006FED	0	Numero de ramas de
+P	0x006FF7	0	baterias
+P	0x007003	0	Anzahl der Batterie-Strings
+P	0x007011	1	(siehe Manual)
+P	0x007039	0	Battery charge mode
+P	0x007045	0	< ABM cycling >
+P	0x007051	0	< constant >
+P	0x00705D	0	Mode de charge batterie
+P	0x007069	0	< cycle ABM  >
+P	0x007075	0	< en continu >
+P	0x007081	0	Modo carga bater
+P	0x00708D	0	< Ciclo ABM >
+P	0x007099	0	< constante >
+P	0x0070A5	0	Batterie Lademodus
+P	0x0070B1	0	< ABM Zyklen  >
+P	0x0070BD	0	< Konstant >
+P	0x0070D5	0	< ABM >
+P	0x00710B	0	Temperature compensated
+P	0x007117	1	charging
+P	0x007120	0	Charge compens
+P	0x00712D	0	rature
+P	0x007135	0	Compensaci
+P	0x00713A	1	n del cargador
+P	0x007142	1	en Temperatura
+P	0x00714A	0	Temperatur kompensiertes
+P	0x007157	0	laden
+P	0x00719C	0	Battery charge % to
+P	0x0071A6	1	restart
+P	0x0071B1	0	< not checked >
+P	0x0071BB	1	% charge batterie
+P	0x0071C6	0	pour red
+P	0x0071CA	1	marrage
+P	0x0071D0	1	< non v
+P	0x0071DB	0	% carga de bater
+P	0x0071E5	1	para reiniciar
+P	0x0071F0	0	< no seleccionado >
+P	0x0071FA	1	Batterieladung in
+P	0x007205	0	% bis Neustart
+P	0x00720F	1	< ungepr
+P	0x007258	0	< 2 min >
+P	0x00725D	0	< 3 min >
+P	0x007262	0	< 5 min >
+P	0x007276	0	Battery low alarm
+P	0x00727F	0	< immediate >
+P	0x007288	0	Alarme batterie faible
+P	0x007293	1	< imm
+P	0x007296	1	diate >
+P	0x00729F	0	Alarma Bater
+P	0x0072A5	1	a baja
+P	0x0072A9	0	< inmediato >
+P	0x0072B3	0	Batterieladung niedrig Alarm
+P	0x0072C1	1	< sofort >
+P	0x007327	0	Automatic battery support
+P	0x007334	1	tests
+P	0x007337	1	Tests automatiques batteries
+P	0x007346	0	Test autom
+P	0x00734B	1	tico de bater
+P	0x007353	1	Automatische Batterietests
+P	0x00738E	0	Ambient temperature
+P	0x007399	0	warning
+P	0x0073A4	0	Alarme temp
+P	0x0073AA	0	rature
+P	0x0073AF	0	ambiante
+P	0x0073BA	0	Atenci
+P	0x0073BD	1	n temperatura
+P	0x0073C5	0	ambiente
+P	0x0073D0	0	Umgebungstemperatur
+P	0x0073DB	0	Warnung
+P	0x007424	0	Predictive maintenance
+P	0x007430	0	notices
+P	0x007434	1	Notifications maintenance
+P	0x007443	1	dictive
+P	0x007447	1	Aviso de  Mantenimiento
+P	0x007454	0	Preventivo
+P	0x007459	1	Erinnerung vorbeugende
+P	0x007465	1	Wartung
+P	0x00749A	0	< open >
+P	0x00749F	1	< closed >
+P	0x0074A5	0	< ouvert >
+P	0x0074AA	1	< ferm
+P	0x0074B0	0	< abierto >
+P	0x0074B6	0	< cerrado >
+P	0x0074BC	0	< offen >
+P	0x0074C4	0	< geschlossen >
+P	0x0074E0	0	REPO input polarity
+P	0x0074EF	0	Polarit
+P	0x0074F3	0	 entr
+P	0x0074F6	0	e REPO
+P	0x0074FE	0	Polaridad de la entrada
+P	0x00750D	0	Polarit
+P	0x007511	0	t des REPO Eingangs
+P	0x007522	0	 REPO
+P	0x007549	0	Logic power off delay
+P	0x007560	1	lai mise hors tension
+P	0x00756C	0	ASI apr
+P	0x007570	0	s autonomie
+P	0x007576	0	Retraso de la l
+P	0x007581	0	de apagado
+P	0x00758C	1	Abschaltverz
+P	0x007593	0	gerung
+P	0x007598	0	r Logik
+P	0x0075C4	0	REPO TERMINAL
+P	0x0075CB	0	TERMINAL REPO
+P	0x0075D2	0	Terminal REPO
+P	0x0075D9	0	REPO Terminal
+P	0x0075E3	0	 REPO
+P	0x007641	0	Behavior on output
+P	0x00764E	0	short circuit
+P	0x00765B	0	<stay on inverter>
+P	0x007668	0	<transfer to bypass>
+P	0x007675	0	Comportement sur
+P	0x007682	0	court-circuit sortie
+P	0x00768F	0	< rester sur onduleur >
+P	0x00769C	0	< transf
+P	0x0076A0	1	rer sur bypass >
+P	0x0076A9	0	Comportamiento con
+P	0x0076B6	0	cortocircuito en salida
+P	0x0076C3	0	<permanecer con inversor>
+P	0x0076D0	0	< paso a bypass >
+P	0x0076DD	0	Verhalten bei Kurzschlu
+P	0x0076EA	0	am Ausgang
+P	0x0076F7	0	< Auf Wechselr. bleiben >
+P	0x007704	0	< in Bypass wechseln >
+P	0x00776D	0	Clear event log
+P	0x007775	0	Total events:
+P	0x00777D	0	Effacer historique
+P	0x007786	1	Total 
+P	0x00778B	0	nements:
+P	0x007790	0	Borrar registro de
+P	0x00779A	0	eventos
+P	0x00779F	1	Numero de eventos:
+P	0x0077B0	0	sche Ereignislog
+P	0x0077BA	1	Anzahl der Ereignisse:
+P	0x0077F2	0	Alarm #
+P	0x0077FA	0	Notice #
+P	0x007802	0	Event #
+P	0x00780A	0	Alarme #
+P	0x007812	0	Information #
+P	0x00781B	1	nement #
+P	0x007822	0	Alarma #
+P	0x00782A	0	Aviso #
+P	0x007832	0	Evento #
+P	0x00783A	0	Alarm #
+P	0x007842	0	Hinweis #
+P	0x00784A	0	Ereignis #
+P	0x007888	0	Battery test failed 
+P	0x007893	0	(open cell voltage)
+P	0x0078A5	0	Echec test batterie 
+P	0x0078B2	0	ment ouvert)
+P	0x0078C2	0	Fallo en test de bater
+P	0x0078CF	1	(elemento abierto)
+P	0x0078DF	0	Batterietest Fehler 
+P	0x0078EA	0	(Zelleninnenwiderstand)
+P	0x007923	0	UPS on command
+P	0x00792B	0	UPS off command
+P	0x007933	0	 (front panel)
+P	0x00793A	1	 (serial)
+P	0x007942	0	 (signal)
+P	0x007949	1	Commande A.S.I allum
+P	0x007955	0	Commande A.S.I 
+P	0x00795D	0	teinte
+P	0x007960	1	 (face avant)
+P	0x007968	0	 (port s
+P	0x00796F	1	"USV Ein" Kommando
+P	0x007979	0	"USV Aus" Kommando
+P	0x007982	1	 (Front Panel)
+P	0x00798C	0	ber seriell)
+P	0x007994	0	ber Kontakt)
+P	0x0079FC	0	ABM charging
+P	0x007A04	0	ABM floating
+P	0x007A0C	0	ABM resting
+P	0x007A14	0	ABM discharging
+P	0x007A1C	0	Charge ABM
+P	0x007A22	1	Floating ABM
+P	0x007A29	0	Repos ABM
+P	0x007A30	1	charge ABM
+P	0x007A36	0	ABM Batterieladung
+P	0x007A43	1	ABM Ladeerhaltungsspannung
+P	0x007A51	0	ABM Ruhephase
+P	0x007A5E	1	ABM Entladung
+P	0x007B3E	1	???????????????
+P	0x007B4B	0	8?????????>0
+P	0x007B53	1	????????>80 
+P	0x007B61	1	???????
+P	0x007B67	1	????????????
+P	0x008847	0	gfff |U
+P	0x00884C	0	cL?M x}
+P	0x00AA72	1	xd\@D
+P	0x00FB95	1	|CpaT
+P	0x00FC60	1	|CpaT
+P	0x01261D	0	W|'xh
+P	0x0130A0	0	~\/\!T
+P	0x0141CC	0	 xeL?M x
+P	0x0141E3	0	 xeL?M x
+P	0x01424B	0	 xeL?M x
+P	0x014262	0	 xeL?M x
+P	0x01430A	0	 xeL?M x
+P	0x014321	0	 xeL?M x
+P	0x014389	0	 xeL?M x
+P	0x0143A0	0	 xeL?M x
+P	0x014A45	0	gfffs
+P	0x014A5F	0	sAt]b\
+P	0x014A7A	0	gfffu
+P	0x014A94	0	uAt]b\
+P	0x014AE2	1	y0y"|
+P	0x014B00	0	gfffx
+P	0x014B1A	0	xAt]b\
+P	0x014B35	0	gfffz
+P	0x014B4F	0	zAt]b\
+P	0x014B6A	0	gfff|
+P	0x014B84	0	|At]b\
+P	0x014B9F	0	gfff~
+P	0x014BB9	0	~At]b\
+P	0x016A3A	1	|oTPx{
+P	0x017CD6	0	@L>I3
+P	0x018963	1	xd\@D0
+P	0x01897D	1	|oT@D0
+P	0x0189AC	1	xd\@D0
+P	0x0189C5	1	|oT@D0
+P	0x019FCB	1	pPx+L
+P	0x019FF3	1	pPx+L
+P	0x01A074	1	pPx+L
+P	0x01A0B5	1	pPx+L
+P	0x01A0D7	1	pPx+L
+P	0x01A2E6	1	sGqPy#
+P	0x01A311	1	swqPy
+P	0x01A34D	1	pPx.L
+P	0x01A394	1	pPx.L
+P	0x01A4AB	0	#\0LGDF
+P	0x01A4B5	0	#\0LGDG
+P	0x01A4BF	0	#\0LGDH
+P	0x01A4C9	0	#\0LGDI
+P	0x01A4D3	0	#\0LGDJ
+P	0x01A4DD	0	#\0LGDK
+P	0x01A610	1	pPx(L
+P	0x01A632	1	pPx(L
+P	0x01A654	1	pPx(L
+P	0x01A676	1	pPx(L
+P	0x01A694	1	pPxnL?
+P	0x01A6DA	1	pPx(L
+P	0x01A6FA	1	pPx(L
+P	0x01A718	1	pPx(L
+P	0x01A912	0	|@}Hm
+P	0x01B809	1	|gTv\
+P	0x01BA9C	1	|CpXx|
+P	0x01C718	1	pPx+L
+P	0x01C729	1	\/\!T
+P	0x01C82C	0	0LG\9
+P	0x01C83B	0	F\u$+
+P	0x01C850	0	0LG\9
+P	0x01C8B9	1	s'pPx
+P	0x01C8C7	1	swqPy
+P	0x01C8FA	0	F\w$1
+P	0x01C911	0	z\/\!T
+P	0x01CA09	0	F\x$l
+P	0x01CABC	0	z\/\!T
+P	0x01CAC6	0	{\/\!T
+P	0x01CB5B	0	0LGD1
+P	0x01CB65	0	W|GD1
+P	0x01CC6B	0	}\/\!T
+P	0x01CC74	0	|\/\!T
+P	0x01CC7D	0	{\/\!T
+P	0x01CC9A	0	|\/\!T
+P	0x01CCB6	0	z\/\!T
+P	0x01CCD2	0	y\/\!T
+P	0x01CCEE	1	\/\!T
+P	0x01CD0A	0	~\/\!T
+P	0x01CD27	0	~\/\!T
+P	0x01CD44	0	}\/\!T
+P	0x01CD61	0	{\/\!T
+P	0x01CD7E	0	z\/\!T
+P	0x01CDB6	1	\/\!T
+P	0x01CF5B	1	pPx+L
+P	0x01CF6A	1	pPx+L
+P	0x01D162	1	pPx+L
+P	0x01D731	1	pPx+L
+P	0x01D85F	0	F\t%/
+P	0x01D8AD	0	F\v%/
+P	0x01D8E9	0	F\x%h
+P	0x01DFB2	1	pPx+L
+P	0x01E17E	1	pPx x
+P	0x01E4AF	0	*LCD?
+P	0x01E719	1	pPx+L
+P	0x01E72A	1	pPxkL}
+P	0x01E932	0	#\DT.
+P	0x01E93C	0	#\DT2
+P	0x01E949	0	#\DT1
+P	0x01E962	0	#\DT.
+P	0x01EA39	0	#\DT2
+P	0x01EA42	0	#\DT1
+P	0x01EA54	0	#\DT.
+P	0x01EA5D	0	#\DT/
+P	0x01EA66	0	#\DT/
+P	0x01F04E	1	pPx*L
+P	0x01F082	1	pPx*L
+P	0x01F131	1	pPx+L
+P	0x01F234	1	pPxnL
+P	0x01F335	1	pPxhL
+P	0x01F3F0	1	pPxjL|
+P	0x01F453	1	pPx xgL}
+P	0x01F497	1	pPxlL
+P	0x01F4E5	1	pPxhL
+P	0x01F5A0	1	pPxjL|
+P	0x01F5B0	1	pPxcL x
+P	0x01F60C	1	pPx xgL}
+P	0x01F66B	1	pPxlL
+P	0x01F6E9	1	pPxjL
+P	0x01F713	1	pPxjL
+P	0x01F85A	1	pPxhL
+P	0x01F876	1	pPxjL
+P	0x01F8B4	1	pPxlL
+P	0x01F994	1	pPxlL
+P	0x01FA61	1	pPxjL
+P	0x01FA85	1	pPxoL
+P	0x01FB99	1	{[zqz
+P	0x01FBC5	1	x,Dcp
+P	0x01FBC9	0	_x_x_x_x
+P	0x01FDD1	0	srsr|
+P	0x01FE14	1	*3*M*g*
+X	0x002093	1	 [EgEsE
+X	0x00209F	1	 [EgEsE
+X	0x0020AB	1	 [EgEsE
+X	0x0020B7	1	 [EgEsE
+X	0x0020C3	1	 [EgEsE
+X	0x0020CF	1	 [EgEsE
+X	0x0020DB	1	 [EgEsE
+X	0x0020F3	1	,[EgEsE
+X	0x0020FF	1	 _LsL
+X	0x002139	1	,*!B!
+X	0x002145	1	,6!N!
+X	0x002161	1	SASiS
+X	0x002169	1	,Z!r!
+X	0x00216D	1	SASiS
+X	0x002175	1	,f!~!
+X	0x002179	1	SASiS
+X	0x002185	1	SASiS
+X	0x00218D	1	,~!Z!
+X	0x002191	1	SASiS
+X	0x0021CD	1	W+W7WCW
+X	0x0021F1	1	Y(Y8YHY
+X	0x0021FA	1	!&"4]R]p]
+X	0x002207	1	,4]R]p]
+X	0x002213	1	,4]R]p]
+X	0x00221F	1	,4]R]p]
+X	0x00222D	1	`.`F`^`
+X	0x002235	1	,&">"na~a
+X	0x002241	1	,2"J""b2bBbRbbb
+X	0x00224D	1	,>"V"
+X	0x002259	1	,J"b"
+X	0x002265	1	,V"n"
+X	0x002271	1	,b"z"leneperete
+X	0x00227F	1	"pfxf
+X	0x00228B	1	"LgRgXg^gdg
+X	0x0022BB	1	"_jcjgjkjoj
+X	0x0022EB	1	"RlXl^ldljl
+X	0x002303	1	#JmLmNmPmRm
+X	0x00231A	1	#"#AoEoIoMoQo
+X	0x002331	1	,"#:#/p1p3p5p7p
+X	0x00233D	1	,.#F#
+X	0x002349	1	,:#R#tq|q
+X	0x002355	1	,F#^#:r@rFrLrRr
+X	0x002361	1	,R#j#
+X	0x00236D	1	,^#v#psvs|s
+X	0x002393	1	#+u1u7u=uCu
+X	0x0023B7	1	#EwMwUw]wew
+X	0x0023CA	0	Flashing in progress...
+X	0x0023E2	1	01.30
+X	0x0023FF	1	< +/- 
+X	0x00240F	0	min >
+X	0x002416	1	             
+X	0x002526	0	000             00000000        
+X	0x0027B3	1	$TxTX
+X	0x0027DB	0	6IU"P
+X	0x0027ED	0	>QIE>
+X	0x0027F3	0	BaQIF
+X	0x0027F6	0	!AEK1
+X	0x0027FC	0	'EEE9
+X	0x0027FF	0	<JII0
+X	0x002805	0	6III6
+X	0x00284E	0	?@0@?
+X	0x002893	1	<@p@<
+X	0x0028E4	0	>qIG>
+X	0x0028F3	1	8dTL8
+X	0x00299F	0	L0|0L
+X	0x0029CC	1	|@|@|
+X	0x002B80	1	*q+\,A-".
+X	0x002B87	1	0y1C2
+X	0x002BA2	1	?6?e?
+X	0x002BB1	1	?e?6?
+X	0x002BCC	1	3C2y1
+X	0x002BD1	1	.".A-\,q+
+X	0x002BDE	1	"q!] F
+X	0x002CBF	1	#k$G%
+X	0x002CC5	1	(g)2*
+X	0x002CD0	1	0x1"2
+X	0x002CF0	1	>$?N?s?
+X	0x002D02	1	?s?N?$?
+X	0x002D23	1	2"2x1
+X	0x002D2E	1	*2*g)
+X	0x002D34	1	&G%k$
